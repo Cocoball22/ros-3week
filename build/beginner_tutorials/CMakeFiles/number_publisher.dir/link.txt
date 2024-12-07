@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/number_publisher.dir/src/number_publisher.cpp.o  -o /home/cona/catkin_ws/devel/lib/beginner_tutorials/number_publisher 
