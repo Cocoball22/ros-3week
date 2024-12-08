@@ -19,6 +19,8 @@ iostream
 -
 stdio.h
 -
+turtlesim/Pose.h
+-
 turtlesim/Kill.h
 -
 turtlesim/Spawn.h
@@ -791,6 +793,22 @@ ros/message_operations.h
 -
 
 /opt/ros/noetic/include/turtlesim/KillResponse.h
+string
+-
+vector
+-
+memory
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+
+/opt/ros/noetic/include/turtlesim/Pose.h
 string
 -
 vector

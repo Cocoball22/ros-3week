@@ -68,6 +68,7 @@ beginner_tutorials/CMakeFiles/turtle_velocity_controller.dir/src/turtle_time.cpp
  /opt/ros/noetic/include/turtlesim/Kill.h
  /opt/ros/noetic/include/turtlesim/KillRequest.h
  /opt/ros/noetic/include/turtlesim/KillResponse.h
+ /opt/ros/noetic/include/turtlesim/Pose.h
  /opt/ros/noetic/include/turtlesim/Spawn.h
  /opt/ros/noetic/include/turtlesim/SpawnRequest.h
  /opt/ros/noetic/include/turtlesim/SpawnResponse.h

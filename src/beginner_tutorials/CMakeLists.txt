@@ -211,7 +211,17 @@ target_link_libraries(turtle_velocity_controller ${catkin_LIBRARIES})
 add_dependencies(turtle_velocity_controller ${${PROJECT_NAME}_EXPORTED_TARGETS} 
 ${catkin_EXPORTED_TARGETS})
 
-add_executable(listener src/listener.cpp)
-target_link_libraries(listener ${catkin_LIBRARIES})
-add_dependencies(listener ${${PROJECT_NAME}_EXPORTED_TARGETS} 
+add_executable(Trigger_Button src/Trigger.cpp)
+target_link_libraries(Trigger_Button ${catkin_LIBRARIES})
+add_dependencies(Trigger_Button ${${PROJECT_NAME}_EXPORTED_TARGETS} 
+${catkin_EXPORTED_TARGETS})
+
+add_executable(Pose_Publisher_node src/turtle_pub.cpp)
+target_link_libraries(Pose_Publisher_node ${catkin_LIBRARIES})
+add_dependencies(Pose_Publisher_node ${${PROJECT_NAME}_EXPORTED_TARGETS} 
+${catkin_EXPORTED_TARGETS})
+
+add_executable(Pose_Subscirber_node src/turtle_sub.cpp)
+target_link_libraries(Pose_Subscirber_node ${catkin_LIBRARIES})
+add_dependencies(Pose_Subscirber_node ${${PROJECT_NAME}_EXPORTED_TARGETS} 
 ${catkin_EXPORTED_TARGETS})
