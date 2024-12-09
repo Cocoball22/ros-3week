@@ -5,6 +5,8 @@
 #include <turtlesim/Kill.h>
 #include <std_srvs/Empty.h>
 
+float vel =1.0; 
+
 class Pose_Subscirber{
 private:
     ros::NodeHandle nh;
@@ -44,17 +46,26 @@ public:
         y = goal_y - current_y;
         // 거리 계산
         distance = sqrt(x*x + y*y);
-        
-        vel_msg.linear.x = 1.0;
+
+        vel_msg.linear.x = vel;
         turtle_pub.publish(vel_msg);
 
-        ROS_INFO("x: %f, y:%f, distance:%f",x, y, distance); // data 메시지를 표현
+        
+        ROS_INFO("x: %f, vel: %f, distance:%f",x, vel, distance); // data 메시지를 표현
 
-           if (x < 0.05)  // 목표지점까지의 거리 3.1 보다 작으면
-           {
-               vel_msg.linear.x = 0.0;
-               turtle_pub.publish(vel_msg);
-           }
+
+        if(x > 1)
+        {
+            vel = vel - 0.05;
+            vel_msg.linear.x = vel;
+            turtle_pub.publish(vel_msg);
+        }
+
+        if(x < 0.05)
+        {
+             vel_msg.linear.x = 0.0;
+             turtle_pub.publish(vel_msg);
+        }
     }
 
     // 위치값 읽기
