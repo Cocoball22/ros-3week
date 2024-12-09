@@ -41,7 +41,6 @@ int main(int argc, char** argv)
     while (ros::ok())
     {
         ctr_trigger.trigger_on();
-        
         ros::spinOnce();
         rate.sleep();
     }

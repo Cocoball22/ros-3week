@@ -11,13 +11,13 @@ private:
 public:
     Pose_Publisher() {
         // Publisher 초기화
-        pose_pub = nh.advertise<turtlesim::Pose>("/my_turtle/pose", 10);
+        pose_pub = nh.advertise<turtlesim::Pose>("/turtle2/pose", 10);
     }
 
     void publishPose() {
         // 값 설정
-        pose_msg.x = 2.0;
-        pose_msg.y = 3.0;
+        pose_msg.x = 5.0;
+        pose_msg.y = 5.0;
         pose_msg.theta = 1.57;
         pose_msg.linear_velocity = 1;
         pose_msg.angular_velocity = 1;

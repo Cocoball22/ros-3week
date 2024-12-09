@@ -137,21 +137,21 @@ public:
     {
         go_command(PI*0.0625,PI*0.03125,64);                //  0.2unit/s, 5.62도/s, 64번 반시계 방향회전
         ros::Duration(2.0).sleep(); // 시작 전 잠시 대기
-        go_command(PI*0.0625 ,-PI*0.03125, 32);             //  0.2unit/s, 5.62도/s, 64번 회전 시계방향 회전
+        go_command(PI*0.0625 ,-PI*0.03125, 32);             //  0.2unit/s, 5.62도/s, 32번 회전 시계방향 회전
         ros::Duration(2.0).sleep(); // 시작 전 잠시 대기전
         go_command(PI*0.0625 ,-PI*0.0625, 16);              //  0.2unit/s, 5.62도/s, 16번 회전 시계방향 회전
         ros::Duration(2.0).sleep(); // 시작 전 잠시 대기
-        go_command(PI*0.0625 ,PI*0.0625, 16);               //  0.2unit/s, 5.62도/s, 64번 반시계 방향회전
+        go_command(PI*0.0625 ,PI*0.0625, 16);               //  0.2unit/s, 5.62도/s, 16번 반시계 방향회전
         ros::Duration(2.0).sleep(); // 시작 전 잠시 대기
     }
 
-    void go_command(float goal_x, float goal_z, float duration)
+    void go_command(float vel_linear_x, float vel_angular_z, float duration)
     {
         ros::Time start_time = ros::Time::now();
         // ros::Rate rate(10);
 
-        vel_msg.linear.x = goal_x;
-        vel_msg.angular.z = goal_z;
+        vel_msg.linear.x = vel_linear_x;
+        vel_msg.angular.z = vel_angular_z;
         
         // 지정된 duration 동안만 실행
         while (ros::Time::now() - start_time < ros::Duration(duration))

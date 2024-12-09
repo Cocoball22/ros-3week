@@ -1,13 +1,13 @@
 [
 {
   "directory": "/home/cona/catkin_ws/src/beginner_tutorials/build",
-  "command": "/usr/bin/g++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"beginner_tutorials\\\" -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -g   -o CMakeFiles/turtle_velocity_controller.dir/src/turtle_time.cpp.o -c /home/cona/catkin_ws/src/beginner_tutorials/src/turtle_time.cpp",
-  "file": "/home/cona/catkin_ws/src/beginner_tutorials/src/turtle_time.cpp"
+  "command": "/usr/bin/g++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"beginner_tutorials\\\" -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -g   -o CMakeFiles/Pose_Publisher_node.dir/src/turtle_pub.cpp.o -c /home/cona/catkin_ws/src/beginner_tutorials/src/turtle_pub.cpp",
+  "file": "/home/cona/catkin_ws/src/beginner_tutorials/src/turtle_pub.cpp"
 },
 {
   "directory": "/home/cona/catkin_ws/src/beginner_tutorials/build",
-  "command": "/usr/bin/g++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"beginner_tutorials\\\" -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -g   -o CMakeFiles/Pose_Publisher_node.dir/src/turtle_pub.cpp.o -c /home/cona/catkin_ws/src/beginner_tutorials/src/turtle_pub.cpp",
-  "file": "/home/cona/catkin_ws/src/beginner_tutorials/src/turtle_pub.cpp"
+  "command": "/usr/bin/g++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"beginner_tutorials\\\" -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -g   -o CMakeFiles/Trigger_Button.dir/src/Trigger.cpp.o -c /home/cona/catkin_ws/src/beginner_tutorials/src/Trigger.cpp",
+  "file": "/home/cona/catkin_ws/src/beginner_tutorials/src/Trigger.cpp"
 },
 {
   "directory": "/home/cona/catkin_ws/src/beginner_tutorials/build",
@@ -16,8 +16,8 @@
 },
 {
   "directory": "/home/cona/catkin_ws/src/beginner_tutorials/build",
-  "command": "/usr/bin/g++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"beginner_tutorials\\\" -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -g   -o CMakeFiles/Trigger_Button.dir/src/Trigger.cpp.o -c /home/cona/catkin_ws/src/beginner_tutorials/src/Trigger.cpp",
-  "file": "/home/cona/catkin_ws/src/beginner_tutorials/src/Trigger.cpp"
+  "command": "/usr/bin/g++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"beginner_tutorials\\\" -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -g   -o CMakeFiles/turtle_velocity_controller.dir/src/turtle_time.cpp.o -c /home/cona/catkin_ws/src/beginner_tutorials/src/turtle_time.cpp",
+  "file": "/home/cona/catkin_ws/src/beginner_tutorials/src/turtle_time.cpp"
 },
 {
   "directory": "/home/cona/catkin_ws/src/beginner_tutorials/build/gtest/googlemock",
