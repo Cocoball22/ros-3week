@@ -23,8 +23,7 @@ private:
 
     // 현재 위치값
     float pose_x , pose_y, pose_theta; 
-    float current_x, current_y, current_theta, distance;
-    float x, y, theta;
+   
 public:
     Pose_Subscirber() 
     {
@@ -40,32 +39,26 @@ public:
 
     void go_command(float goal_x, float goal_y, float goal_theta)
     {
-        ROS_INFO("current_x: %f, current_y:%f, current_theta:%f",current_x, current_y, current_theta); // data 메시지를 표현
+
+        float current_x, current_y, current_theta, distance;
+        float x, y, theta;
+
+        current_x = pose_x;
+        current_y = pose_y;
+        current_theta = pose_theta;
 
         x = goal_x - current_x;
         y = goal_y - current_y;
         // 거리 계산
         distance = sqrt(x*x + y*y);
 
-        vel_msg.linear.x = vel;
+        vel_msg.linear.x = 1;
+        vel_msg.angular.z = 1;
+
         turtle_pub.publish(vel_msg);
 
-        
+        ROS_INFO("current_x: %f, current_y:%f, current_theta:%f",current_x, current_y, current_theta); // data 메시지를 표현
         ROS_INFO("x: %f, vel: %f, distance:%f",x, vel, distance); // data 메시지를 표현
-
-
-        if(x > 1)
-        {
-            vel = vel - 0.05;
-            vel_msg.linear.x = vel;
-            turtle_pub.publish(vel_msg);
-        }
-
-        if(x < 0.05)
-        {
-             vel_msg.linear.x = 0.0;
-             turtle_pub.publish(vel_msg);
-        }
     }
 
     // 위치값 읽기
@@ -74,10 +67,6 @@ public:
         pose_x = Subsciber_Pose -> x;
         pose_y = Subsciber_Pose -> y;
         pose_theta = Subsciber_Pose -> theta;
-
-        current_x = pose_x;
-        current_y = pose_y;
-        current_theta = pose_theta;
     }   
 
     // 생성
@@ -122,18 +111,16 @@ public:
 int main(int argc, char** argv) {
     ros::init(argc, argv, "Pose_Subscirber_node");
     ros::Time::init();
-    ros::Rate rate(10);
+    ros::Rate rate(60);
     Pose_Subscirber Pose_Subscirber;
 
+   while(ros::ok())
+   {
     // Pose_Subscirber.spawnTurtle(2.0,3.0,1.57,"turtle2");
-   
+    Pose_Subscirber.go_command(8.544445,5.544445,0.0);
 
-    while(ros::ok()) // roscore가 실행 되는 동안
-    {
-        Pose_Subscirber.go_command(8.544445,5.544445,0.0);
-        ros::spinOnce();
-        rate.sleep();
-    }
-    
-    return 0;
+    ros::spinOnce();
+    rate.sleep(); // 위에서 정한 루프 주기에 따라 슬립에 들어간다.
+   }
+
 }

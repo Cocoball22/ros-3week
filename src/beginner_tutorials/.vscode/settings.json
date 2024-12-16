@@ -22,5 +22,6 @@
         "svd": "cpp",
         "stdvector": "cpp",
         "vector": "cpp"
-    }
+    },
+    "ros.distro": "noetic"
 }
