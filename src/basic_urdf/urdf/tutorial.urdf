@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<robot name="Tutorial">
+   
+  <link name="base_link"/>
+  <link name="front_laser"/>
+  <link name="rear_laser"/>
+  <link name="camera_link"/>
+
+  <joint name="joint1" type="fixed">
+    <parent link="base_link" />
+    <child link="front_laser" />
+    <origin rpy="0 0 0.785398163" xyz="0.0925 0.0575 0" />
+  </joint>
+
+  <joint name="joint2" type="fixed">
+    <parent link="base_link" />
+    <child link="rear_laser" />
+    <origin rpy="0 0 3.926990817" xyz="-0.0925 -0.0575 0.0" />
+  </joint>
+  
+   <joint name="joint3" type="fixed">
+      <parent link="base_link" />
+      <child link="camera_link" />
+      <origin rpy="0 0 0" xyz="0.1275 0.0 0.0" />
+   </joint>
+</robot>

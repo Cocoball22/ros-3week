@@ -5,8 +5,6 @@
 #include <turtlesim/Kill.h>
 #include <std_srvs/Empty.h>
 
-float vel =1.0; 
-
 class Pose_Subscirber{
 private:
     ros::NodeHandle nh;
@@ -21,9 +19,11 @@ private:
     ros::ServiceClient kill_client;
     ros::ServiceClient reset_client;
 
+    bool goal_reached = false;  // 목표 도달 여부 플래그
+
     // 현재 위치값
     float pose_x , pose_y, pose_theta; 
-   
+    float PI = 3.1415926535897;
 public:
     Pose_Subscirber() 
     {
@@ -39,26 +39,73 @@ public:
 
     void go_command(float goal_x, float goal_y, float goal_theta)
     {
-
-        float current_x, current_y, current_theta, distance;
+        
+         if (goal_reached) {
+            ROS_INFO("Goal already reached!");
+            return;
+        }
+        
+        float distance;
         float x, y, theta;
 
-        current_x = pose_x;
-        current_y = pose_y;
-        current_theta = pose_theta;
-
-        x = goal_x - current_x;
-        y = goal_y - current_y;
+        x = goal_x - pose_x;
+        y = goal_y - pose_y;
         // 거리 계산
         distance = sqrt(x*x + y*y);
 
+        // 목표 거리 확인
+        if (distance < 0.01) { // 일정 거리 이내로 접근 시 목표 도달로 간주
+            vel_msg.linear.x = 0;
+            vel_msg.angular.z = 0;
+            turtle_pub.publish(vel_msg);
+            goal_reached = true;  // 목표 도달 플래그 설정
+            ROS_INFO("Goal reached!");
+            return;
+        }
+
         vel_msg.linear.x = 1;
-        vel_msg.angular.z = 1;
+        vel_msg.angular.z = 0;
 
         turtle_pub.publish(vel_msg);
 
-        ROS_INFO("current_x: %f, current_y:%f, current_theta:%f",current_x, current_y, current_theta); // data 메시지를 표현
-        ROS_INFO("x: %f, vel: %f, distance:%f",x, vel, distance); // data 메시지를 표현
+        ROS_INFO("x: %f, distance:%f",x, distance); // data 메시지를 표현
+    }
+
+     void turn_command(float goal_theta)
+    {
+        
+         if (goal_reached) {
+            ROS_INFO("Goal already reached!");
+            return;
+        }
+        
+        float distance;
+        float x, y, theta;
+  
+        // 거리 계산
+        distance = sqrt(x*x + y*y);
+
+        // 목표 거리 확인
+        if (distance < 0.01) { // 일정 거리 이내로 접근 시 목표 도달로 간주
+            vel_msg.linear.x = 0;
+            vel_msg.angular.z = 0;
+            turtle_pub.publish(vel_msg);
+            goal_reached = true;  // 목표 도달 플래그 설정
+            ROS_INFO("Goal reached!");
+            return;
+        }
+
+        vel_msg.linear.x = 1;
+        vel_msg.angular.z = 0;
+
+        turtle_pub.publish(vel_msg);
+
+        ROS_INFO("x: %f, distance:%f",x, distance); // data 메시지를 표현
+    }
+    
+      // 목표 초기화 함수 추가 (필요 시 호출)
+    void resetGoal() {
+        goal_reached = false;
     }
 
     // 위치값 읽기
@@ -113,11 +160,14 @@ int main(int argc, char** argv) {
     ros::Time::init();
     ros::Rate rate(60);
     Pose_Subscirber Pose_Subscirber;
+    
+     Pose_Subscirber.go_command(8.544445,5.544445,0.0);
 
    while(ros::ok())
    {
     // Pose_Subscirber.spawnTurtle(2.0,3.0,1.57,"turtle2");
-    Pose_Subscirber.go_command(8.544445,5.544445,0.0);
+    
+   
 
     ros::spinOnce();
     rate.sleep(); // 위에서 정한 루프 주기에 따라 슬립에 들어간다.
