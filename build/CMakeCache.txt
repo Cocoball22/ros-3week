@@ -559,10 +559,10 @@ image_transport_DIR:PATH=/opt/ros/noetic/share/image_transport/cmake
 lib:FILEPATH=/opt/ros/noetic/lib/libxmlrpcpp.so
 
 //Value Computed by CMake
-ls01b_v2_BINARY_DIR:STATIC=/home/cona/catkin_ws/build/ls01b_v2/src/ls01b_v2
+ls01b_v2_BINARY_DIR:STATIC=/home/cona/catkin_ws/build/ls01b_v2
 
 //Value Computed by CMake
-ls01b_v2_SOURCE_DIR:STATIC=/home/cona/catkin_ws/src/ls01b_v2/src/ls01b_v2
+ls01b_v2_SOURCE_DIR:STATIC=/home/cona/catkin_ws/src/ls01b_v2
 
 //The directory containing a CMake configuration file for message_filters.
 message_filters_DIR:PATH=/opt/ros/noetic/share/message_filters/cmake

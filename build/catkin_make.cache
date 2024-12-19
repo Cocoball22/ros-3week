@@ -1,2 +1,2 @@
-OrbbecSDK_ROS1:basic_urdf:beginner_tutorials:ls01b_v2/src/ls01b_v2
+OrbbecSDK_ROS1:basic_urdf:beginner_tutorials:ls01b_v2
 -DCATKIN_DEVEL_PREFIX=/home/cona/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/cona/catkin_ws/install -G Unix Makefiles

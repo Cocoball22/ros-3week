@@ -8,6 +8,6 @@
 
   <include file="/home/cona/catkin_ws/src/OrbbecSDK_ROS1/launch/astra_stereo_u3.launch"/>
 
-  <include file="/home/cona/catkin_ws/src/ls01b_v2/src/ls01b_v2/launch/ls01b_v2.launch"/>
+  <include file="/home/cona/catkin_ws/src/ls01b_v2/launch/ls01b_v2.launch"/>
 
 </launch>
