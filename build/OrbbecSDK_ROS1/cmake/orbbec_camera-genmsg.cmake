@@ -59,7 +59,7 @@ add_custom_target(_orbbec_camera_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/home/cona/catkin_ws/src/OrbbecSDK_ROS1/srv/GetDeviceInfo.srv" NAME_WE)
 add_custom_target(_orbbec_camera_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "orbbec_camera" "/home/cona/catkin_ws/src/OrbbecSDK_ROS1/srv/GetDeviceInfo.srv" "std_msgs/Header:orbbec_camera/DeviceInfo"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "orbbec_camera" "/home/cona/catkin_ws/src/OrbbecSDK_ROS1/srv/GetDeviceInfo.srv" "orbbec_camera/DeviceInfo:std_msgs/Header"
 )
 
 get_filename_component(_filename "/home/cona/catkin_ws/src/OrbbecSDK_ROS1/srv/GetInt32.srv" NAME_WE)
@@ -141,7 +141,7 @@ _generate_srv_cpp(orbbec_camera
 _generate_srv_cpp(orbbec_camera
   "/home/cona/catkin_ws/src/OrbbecSDK_ROS1/srv/GetDeviceInfo.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/cona/catkin_ws/src/OrbbecSDK_ROS1/msg/DeviceInfo.msg"
+  "/home/cona/catkin_ws/src/OrbbecSDK_ROS1/msg/DeviceInfo.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/orbbec_camera
 )
 _generate_srv_cpp(orbbec_camera
@@ -270,7 +270,7 @@ _generate_srv_eus(orbbec_camera
 _generate_srv_eus(orbbec_camera
   "/home/cona/catkin_ws/src/OrbbecSDK_ROS1/srv/GetDeviceInfo.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/cona/catkin_ws/src/OrbbecSDK_ROS1/msg/DeviceInfo.msg"
+  "/home/cona/catkin_ws/src/OrbbecSDK_ROS1/msg/DeviceInfo.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/orbbec_camera
 )
 _generate_srv_eus(orbbec_camera
@@ -399,7 +399,7 @@ _generate_srv_lisp(orbbec_camera
 _generate_srv_lisp(orbbec_camera
   "/home/cona/catkin_ws/src/OrbbecSDK_ROS1/srv/GetDeviceInfo.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/cona/catkin_ws/src/OrbbecSDK_ROS1/msg/DeviceInfo.msg"
+  "/home/cona/catkin_ws/src/OrbbecSDK_ROS1/msg/DeviceInfo.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/orbbec_camera
 )
 _generate_srv_lisp(orbbec_camera
@@ -528,7 +528,7 @@ _generate_srv_nodejs(orbbec_camera
 _generate_srv_nodejs(orbbec_camera
   "/home/cona/catkin_ws/src/OrbbecSDK_ROS1/srv/GetDeviceInfo.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/cona/catkin_ws/src/OrbbecSDK_ROS1/msg/DeviceInfo.msg"
+  "/home/cona/catkin_ws/src/OrbbecSDK_ROS1/msg/DeviceInfo.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/orbbec_camera
 )
 _generate_srv_nodejs(orbbec_camera
@@ -657,7 +657,7 @@ _generate_srv_py(orbbec_camera
 _generate_srv_py(orbbec_camera
   "/home/cona/catkin_ws/src/OrbbecSDK_ROS1/srv/GetDeviceInfo.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/cona/catkin_ws/src/OrbbecSDK_ROS1/msg/DeviceInfo.msg"
+  "/home/cona/catkin_ws/src/OrbbecSDK_ROS1/msg/DeviceInfo.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/orbbec_camera
 )
 _generate_srv_py(orbbec_camera

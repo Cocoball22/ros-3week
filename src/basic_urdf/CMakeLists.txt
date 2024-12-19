@@ -9,7 +9,7 @@ project(basic_urdf)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   roscpp
-  
+  tf 
 )
 
 ## System dependencies are found with CMake's conventions
@@ -126,11 +126,20 @@ include_directories(
 
 add_executable(${PROJECT_NAME}_node src/test_node.cpp)
 
-#add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 target_link_libraries(${PROJECT_NAME}_node
   ${catkin_LIBRARIES}
 )
+
+add_executable(my_front_laser src/basic_tf.cpp)
+
+add_dependencies(my_front_laser ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+
+target_link_libraries(my_front_laser
+   ${catkin_LIBRARIES}
+)
+
 
 #############
 ## Install ##

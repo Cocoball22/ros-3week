@@ -3,8 +3,10 @@
 <launch>
 
   <param name="robot_description" textfile="$(find basic_urdf)/urdf/tutorial.urdf"/>
-
+   
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+  
+  <node pkg="basic_urdf" type="my_front_laser" name="listener"/>
 
   <include file="/home/cona/catkin_ws/src/OrbbecSDK_ROS1/launch/astra_stereo_u3.launch"/>
 
