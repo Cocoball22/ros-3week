@@ -10,5 +10,4 @@
 
   <include file="/home/cona/catkin_ws/src/ls01b_v2/src/ls01b_v2/launch/ls01b_v2.launch"/>
 
-  <arg name="frame_id" value="camera/depth/points"/>
 </launch>
