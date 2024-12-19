@@ -285,6 +285,19 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
+# Target rules for targets named basic_urdf_node
+
+# Build rule for target.
+basic_urdf_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 basic_urdf_node
+.PHONY : basic_urdf_node
+
+# fast build rule for target.
+basic_urdf_node/fast:
+	$(MAKE) -f basic_urdf/CMakeFiles/basic_urdf_node.dir/build.make basic_urdf/CMakeFiles/basic_urdf_node.dir/build
+.PHONY : basic_urdf_node/fast
+
+#=============================================================================
 # Target rules for targets named std_msgs_generate_messages_py
 
 # Build rule for target.
@@ -1684,6 +1697,7 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
+	@echo "... basic_urdf_node"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_cpp"

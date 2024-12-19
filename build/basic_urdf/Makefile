@@ -168,6 +168,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+basic_urdf/CMakeFiles/basic_urdf_node.dir/rule:
+	cd /home/cona/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 basic_urdf/CMakeFiles/basic_urdf_node.dir/rule
+.PHONY : basic_urdf/CMakeFiles/basic_urdf_node.dir/rule
+
+# Convenience name for target.
+basic_urdf_node: basic_urdf/CMakeFiles/basic_urdf_node.dir/rule
+
+.PHONY : basic_urdf_node
+
+# fast build rule for target.
+basic_urdf_node/fast:
+	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/basic_urdf_node.dir/build.make basic_urdf/CMakeFiles/basic_urdf_node.dir/build
+.PHONY : basic_urdf_node/fast
+
+# Convenience name for target.
 basic_urdf/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
 	cd /home/cona/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 basic_urdf/CMakeFiles/std_msgs_generate_messages_py.dir/rule
 .PHONY : basic_urdf/CMakeFiles/std_msgs_generate_messages_py.dir/rule
@@ -392,6 +407,33 @@ rosgraph_msgs_generate_messages_py/fast:
 	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make basic_urdf/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
 .PHONY : rosgraph_msgs_generate_messages_py/fast
 
+src/test_node.o: src/test_node.cpp.o
+
+.PHONY : src/test_node.o
+
+# target to build an object file
+src/test_node.cpp.o:
+	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/basic_urdf_node.dir/build.make basic_urdf/CMakeFiles/basic_urdf_node.dir/src/test_node.cpp.o
+.PHONY : src/test_node.cpp.o
+
+src/test_node.i: src/test_node.cpp.i
+
+.PHONY : src/test_node.i
+
+# target to preprocess a source file
+src/test_node.cpp.i:
+	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/basic_urdf_node.dir/build.make basic_urdf/CMakeFiles/basic_urdf_node.dir/src/test_node.cpp.i
+.PHONY : src/test_node.cpp.i
+
+src/test_node.s: src/test_node.cpp.s
+
+.PHONY : src/test_node.s
+
+# target to generate assembly for a file
+src/test_node.cpp.s:
+	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/basic_urdf_node.dir/build.make basic_urdf/CMakeFiles/basic_urdf_node.dir/src/test_node.cpp.s
+.PHONY : src/test_node.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -402,6 +444,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... basic_urdf_node"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_cpp"
@@ -420,6 +463,9 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_py"
+	@echo "... src/test_node.o"
+	@echo "... src/test_node.i"
+	@echo "... src/test_node.s"
 .PHONY : help
 
 
