@@ -2,6 +2,7 @@
 #include <tf/transform_listener.h>
 #include <sensor_msgs/LaserScan.h>
 #include <sensor_msgs/PointCloud.h>
+#include <tf/tf.h>
 #include <cmath>
 
 class make_point
@@ -12,7 +13,10 @@ private:
     ros::Publisher cloud_pub;
     tf::TransformListener listener;
     tf::StampedTransform transform;
-    
+    tf::Matrix3x3 R;
+    tf::Vector3 T, laser_point, point_out; // 회전 적용
+    tf::Quaternion q;
+ 
     sensor_msgs::PointCloud cloud;
 public:
     make_point()
@@ -23,43 +27,55 @@ public:
 
     void counterCallback(const sensor_msgs::LaserScan::ConstPtr& msg)
     {
-            cloud.header.stamp = ros::Time::now();
-            cloud.header.frame_id = "front_laser";
+      float x,y,z;
+      while (nh.ok())
+      {
+        try
+        {
+          listener.waitForTransform("base_link", "front_laser", ros::Time(0), ros::Duration(3.0));
+          listener.lookupTransform("base_link","front_laser",ros::Time(0), transform);
 
-            unsigned int num_points = 1440;
-            cloud.points.resize(num_points);
+          R = tf::Matrix3x3(transform.getRotation()); // 회전 정보를 쿼터니언으로 반환
+          T = tf::Vector3(transform.getOrigin().x(),transform.getOrigin().y(),transform.getOrigin().z()); // base_link 프레임을 기준
 
-            try
-            {
-                listener.waitForTransform("base_link", "front_laser", ros::Time(0), ros::Duration(3.0));
-                listener.lookupTransform("base_link","front_laser",ros::Time(0), transform);
-            }
-            catch(tf::TransformException ex)
-            {
-                ROS_ERROR("%s",ex.what());
-  	            ros::Duration(1.0).sleep();
-            }
+          cloud.header.stamp = ros::Time::now();
+          cloud.header.frame_id = "front_laser";
 
-            //we'll also add an intensity channel to the cloud
-            cloud.channels.resize(1);
-            cloud.channels[0].name = "intensities";
-            cloud.channels[0].values.resize(num_points);
+          // for(unsigned int i = 0; i < msg->ranges.size(); i++)
+          // {
+          //    float r = msg->ranges[i]; // 현재 거리값
+          //    float angle_min = msg->angle_min;
+          //    float theta = angle_min + i * msg->angle_increment; // 현재 각도 계산
 
-            //generate some fake data for our point cloud
-            for(unsigned int i = 0; i < num_points; ++i)
-            {
-              float r = msg->ranges[i]; // 현재 거리값
-              float angle_min = 0;
-              float theta = angle_min + i * msg->angle_increment; // 현재 각도 계산
+          //    x = r * cos(theta);
+          //    y = r * sin(theta);
+          //    z = 0;
 
-              cloud.points[i].x = r * cos(theta);
-              cloud.points[i].y = r * sin(theta);
-              cloud.points[i].z = 0;
-              cloud.channels[0].values[i] = msg->intensities[i];
-            }
+          //   laser_point = tf::Vector3(x, y, z);  // 한 줄로 값을 할당
+          //   //printf("%.3f, %.3f, %.3f \n",laser_point.x(),laser_point.y(),laser_point.z());
+          // }
+          
+           float distance = msg->range_max  - msg->range_min;
+           float angle_min = msg->angle_min;
+           float theta = angle_min + i * msg->angle_increment; // 현재 각도 계산
+        }
+        catch(tf::TransformException ex)
+        {
+          ROS_ERROR("%s",ex.what());
+          ros::Duration(1.0).sleep();
+        }
 
-            cloud_pub.publish(cloud);
+      
+              
+              // cloud.points[i].x = point_out.x() + tanslation.x();
+              // cloud.points[i].y = point_out.y() + tanslation.y();
+              // cloud.points[i].z = point_out.z() + tanslation.z();
+              // point_out = rotation_matrix * laser_point;
+
+         cloud_pub.publish(cloud);
+      }
     }
+
 };
 
 

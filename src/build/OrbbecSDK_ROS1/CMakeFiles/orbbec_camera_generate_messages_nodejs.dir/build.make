@@ -104,9 +104,9 @@ devel/share/gennodejs/ros/orbbec_camera/srv/SetBool.js: ../OrbbecSDK_ROS1/srv/Se
 
 devel/share/gennodejs/ros/orbbec_camera/srv/GetCameraInfo.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
 devel/share/gennodejs/ros/orbbec_camera/srv/GetCameraInfo.js: ../OrbbecSDK_ROS1/srv/GetCameraInfo.srv
+devel/share/gennodejs/ros/orbbec_camera/srv/GetCameraInfo.js: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 devel/share/gennodejs/ros/orbbec_camera/srv/GetCameraInfo.js: /opt/ros/noetic/share/sensor_msgs/msg/RegionOfInterest.msg
 devel/share/gennodejs/ros/orbbec_camera/srv/GetCameraInfo.js: /opt/ros/noetic/share/sensor_msgs/msg/CameraInfo.msg
-devel/share/gennodejs/ros/orbbec_camera/srv/GetCameraInfo.js: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/cona/catkin_ws/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating Javascript code from orbbec_camera/GetCameraInfo.srv"
 	cd /home/cona/catkin_ws/src/build/OrbbecSDK_ROS1 && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/cona/catkin_ws/src/OrbbecSDK_ROS1/srv/GetCameraInfo.srv -Iorbbec_camera:/home/cona/catkin_ws/src/OrbbecSDK_ROS1/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p orbbec_camera -o /home/cona/catkin_ws/src/build/devel/share/gennodejs/ros/orbbec_camera/srv
 
@@ -117,8 +117,8 @@ devel/share/gennodejs/ros/orbbec_camera/srv/GetCameraParams.js: ../OrbbecSDK_ROS
 
 devel/share/gennodejs/ros/orbbec_camera/srv/GetDeviceInfo.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
 devel/share/gennodejs/ros/orbbec_camera/srv/GetDeviceInfo.js: ../OrbbecSDK_ROS1/srv/GetDeviceInfo.srv
-devel/share/gennodejs/ros/orbbec_camera/srv/GetDeviceInfo.js: ../OrbbecSDK_ROS1/msg/DeviceInfo.msg
 devel/share/gennodejs/ros/orbbec_camera/srv/GetDeviceInfo.js: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+devel/share/gennodejs/ros/orbbec_camera/srv/GetDeviceInfo.js: ../OrbbecSDK_ROS1/msg/DeviceInfo.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/cona/catkin_ws/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating Javascript code from orbbec_camera/GetDeviceInfo.srv"
 	cd /home/cona/catkin_ws/src/build/OrbbecSDK_ROS1 && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/cona/catkin_ws/src/OrbbecSDK_ROS1/srv/GetDeviceInfo.srv -Iorbbec_camera:/home/cona/catkin_ws/src/OrbbecSDK_ROS1/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p orbbec_camera -o /home/cona/catkin_ws/src/build/devel/share/gennodejs/ros/orbbec_camera/srv
 

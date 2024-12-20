@@ -6,18 +6,12 @@
 
 #IncludeRegexTransform: 
 
-/home/cona/catkin_ws/src/basic_urdf/src/make_point.cpp
+/home/cona/catkin_ws/src/basic_urdf/src/combi_test.cpp
 ros/ros.h
 -
 tf/transform_listener.h
 -
 sensor_msgs/LaserScan.h
--
-sensor_msgs/PointCloud.h
--
-tf/tf.h
--
-cmath
 -
 
 /opt/ros/noetic/include/geometry_msgs/Point.h
