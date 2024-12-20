@@ -168,6 +168,36 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+basic_urdf/CMakeFiles/make_point.dir/rule:
+	cd /home/cona/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 basic_urdf/CMakeFiles/make_point.dir/rule
+.PHONY : basic_urdf/CMakeFiles/make_point.dir/rule
+
+# Convenience name for target.
+make_point: basic_urdf/CMakeFiles/make_point.dir/rule
+
+.PHONY : make_point
+
+# fast build rule for target.
+make_point/fast:
+	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/make_point.dir/build.make basic_urdf/CMakeFiles/make_point.dir/build
+.PHONY : make_point/fast
+
+# Convenience name for target.
+basic_urdf/CMakeFiles/combi_test.dir/rule:
+	cd /home/cona/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 basic_urdf/CMakeFiles/combi_test.dir/rule
+.PHONY : basic_urdf/CMakeFiles/combi_test.dir/rule
+
+# Convenience name for target.
+combi_test: basic_urdf/CMakeFiles/combi_test.dir/rule
+
+.PHONY : combi_test
+
+# fast build rule for target.
+combi_test/fast:
+	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/combi_test.dir/build.make basic_urdf/CMakeFiles/combi_test.dir/build
+.PHONY : combi_test/fast
+
+# Convenience name for target.
 basic_urdf/CMakeFiles/my_front_laser.dir/rule:
 	cd /home/cona/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 basic_urdf/CMakeFiles/my_front_laser.dir/rule
 .PHONY : basic_urdf/CMakeFiles/my_front_laser.dir/rule
@@ -899,6 +929,60 @@ src/basic_tf.cpp.s:
 	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/my_front_laser.dir/build.make basic_urdf/CMakeFiles/my_front_laser.dir/src/basic_tf.cpp.s
 .PHONY : src/basic_tf.cpp.s
 
+src/combi_test.o: src/combi_test.cpp.o
+
+.PHONY : src/combi_test.o
+
+# target to build an object file
+src/combi_test.cpp.o:
+	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/combi_test.dir/build.make basic_urdf/CMakeFiles/combi_test.dir/src/combi_test.cpp.o
+.PHONY : src/combi_test.cpp.o
+
+src/combi_test.i: src/combi_test.cpp.i
+
+.PHONY : src/combi_test.i
+
+# target to preprocess a source file
+src/combi_test.cpp.i:
+	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/combi_test.dir/build.make basic_urdf/CMakeFiles/combi_test.dir/src/combi_test.cpp.i
+.PHONY : src/combi_test.cpp.i
+
+src/combi_test.s: src/combi_test.cpp.s
+
+.PHONY : src/combi_test.s
+
+# target to generate assembly for a file
+src/combi_test.cpp.s:
+	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/combi_test.dir/build.make basic_urdf/CMakeFiles/combi_test.dir/src/combi_test.cpp.s
+.PHONY : src/combi_test.cpp.s
+
+src/make_point.o: src/make_point.cpp.o
+
+.PHONY : src/make_point.o
+
+# target to build an object file
+src/make_point.cpp.o:
+	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/make_point.dir/build.make basic_urdf/CMakeFiles/make_point.dir/src/make_point.cpp.o
+.PHONY : src/make_point.cpp.o
+
+src/make_point.i: src/make_point.cpp.i
+
+.PHONY : src/make_point.i
+
+# target to preprocess a source file
+src/make_point.cpp.i:
+	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/make_point.dir/build.make basic_urdf/CMakeFiles/make_point.dir/src/make_point.cpp.i
+.PHONY : src/make_point.cpp.i
+
+src/make_point.s: src/make_point.cpp.s
+
+.PHONY : src/make_point.s
+
+# target to generate assembly for a file
+src/make_point.cpp.s:
+	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/make_point.dir/build.make basic_urdf/CMakeFiles/make_point.dir/src/make_point.cpp.s
+.PHONY : src/make_point.cpp.s
+
 src/test_node.o: src/test_node.cpp.o
 
 .PHONY : src/test_node.o
@@ -935,6 +1019,8 @@ help:
 	@echo "... install/strip"
 	@echo "... install"
 	@echo "... list_install_components"
+	@echo "... make_point"
+	@echo "... combi_test"
 	@echo "... my_front_laser"
 	@echo "... tf2_msgs_generate_messages_nodejs"
 	@echo "... tf2_msgs_generate_messages_lisp"
@@ -989,6 +1075,12 @@ help:
 	@echo "... src/basic_tf.o"
 	@echo "... src/basic_tf.i"
 	@echo "... src/basic_tf.s"
+	@echo "... src/combi_test.o"
+	@echo "... src/combi_test.i"
+	@echo "... src/combi_test.s"
+	@echo "... src/make_point.o"
+	@echo "... src/make_point.i"
+	@echo "... src/make_point.s"
 	@echo "... src/test_node.o"
 	@echo "... src/test_node.i"
 	@echo "... src/test_node.s"

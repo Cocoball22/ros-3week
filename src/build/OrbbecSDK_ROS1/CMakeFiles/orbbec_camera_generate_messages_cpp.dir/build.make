@@ -112,9 +112,9 @@ devel/include/orbbec_camera/SetBool.h: /opt/ros/noetic/share/gencpp/srv.h.templa
 
 devel/include/orbbec_camera/GetCameraInfo.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 devel/include/orbbec_camera/GetCameraInfo.h: ../OrbbecSDK_ROS1/srv/GetCameraInfo.srv
+devel/include/orbbec_camera/GetCameraInfo.h: /opt/ros/noetic/share/sensor_msgs/msg/RegionOfInterest.msg
 devel/include/orbbec_camera/GetCameraInfo.h: /opt/ros/noetic/share/sensor_msgs/msg/CameraInfo.msg
 devel/include/orbbec_camera/GetCameraInfo.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-devel/include/orbbec_camera/GetCameraInfo.h: /opt/ros/noetic/share/sensor_msgs/msg/RegionOfInterest.msg
 devel/include/orbbec_camera/GetCameraInfo.h: /opt/ros/noetic/share/gencpp/msg.h.template
 devel/include/orbbec_camera/GetCameraInfo.h: /opt/ros/noetic/share/gencpp/srv.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/cona/catkin_ws/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating C++ code from orbbec_camera/GetCameraInfo.srv"
@@ -129,8 +129,8 @@ devel/include/orbbec_camera/GetCameraParams.h: /opt/ros/noetic/share/gencpp/srv.
 
 devel/include/orbbec_camera/GetDeviceInfo.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 devel/include/orbbec_camera/GetDeviceInfo.h: ../OrbbecSDK_ROS1/srv/GetDeviceInfo.srv
-devel/include/orbbec_camera/GetDeviceInfo.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 devel/include/orbbec_camera/GetDeviceInfo.h: ../OrbbecSDK_ROS1/msg/DeviceInfo.msg
+devel/include/orbbec_camera/GetDeviceInfo.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 devel/include/orbbec_camera/GetDeviceInfo.h: /opt/ros/noetic/share/gencpp/msg.h.template
 devel/include/orbbec_camera/GetDeviceInfo.h: /opt/ros/noetic/share/gencpp/srv.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/cona/catkin_ws/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating C++ code from orbbec_camera/GetDeviceInfo.srv"

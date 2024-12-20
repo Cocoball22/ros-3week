@@ -21,6 +21,16 @@
 },
 {
   "directory": "/home/cona/catkin_ws/src/build/basic_urdf",
+  "command": "/usr/bin/g++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"basic_urdf\\\" -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -g   -o CMakeFiles/make_point.dir/src/make_point.cpp.o -c /home/cona/catkin_ws/src/basic_urdf/src/make_point.cpp",
+  "file": "/home/cona/catkin_ws/src/basic_urdf/src/make_point.cpp"
+},
+{
+  "directory": "/home/cona/catkin_ws/src/build/basic_urdf",
+  "command": "/usr/bin/g++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"basic_urdf\\\" -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -g   -o CMakeFiles/combi_test.dir/src/combi_test.cpp.o -c /home/cona/catkin_ws/src/basic_urdf/src/combi_test.cpp",
+  "file": "/home/cona/catkin_ws/src/basic_urdf/src/combi_test.cpp"
+},
+{
+  "directory": "/home/cona/catkin_ws/src/build/basic_urdf",
   "command": "/usr/bin/g++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"basic_urdf\\\" -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -g   -o CMakeFiles/my_front_laser.dir/src/basic_tf.cpp.o -c /home/cona/catkin_ws/src/basic_urdf/src/basic_tf.cpp",
   "file": "/home/cona/catkin_ws/src/basic_urdf/src/basic_tf.cpp"
 },

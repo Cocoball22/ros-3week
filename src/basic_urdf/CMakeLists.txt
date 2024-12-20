@@ -140,6 +140,21 @@ target_link_libraries(my_front_laser
    ${catkin_LIBRARIES}
 )
 
+add_executable(combi_test src/combi_test.cpp)
+ 
+ add_dependencies(combi_test ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+ 
+ target_link_libraries(combi_test
+    ${catkin_LIBRARIES}
+)
+
+add_executable(make_point src/make_point.cpp)
+ 
+ add_dependencies(make_point ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+ 
+ target_link_libraries(make_point
+    ${catkin_LIBRARIES}
+)
 
 #############
 ## Install ##

@@ -112,9 +112,9 @@ OrbbecSDK_ROS1/CMakeFiles/orbbec_camera_generate_messages_cpp: /home/cona/catkin
 
 /home/cona/catkin_ws/devel/include/orbbec_camera/GetCameraInfo.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/cona/catkin_ws/devel/include/orbbec_camera/GetCameraInfo.h: /home/cona/catkin_ws/src/OrbbecSDK_ROS1/srv/GetCameraInfo.srv
-/home/cona/catkin_ws/devel/include/orbbec_camera/GetCameraInfo.h: /opt/ros/noetic/share/sensor_msgs/msg/RegionOfInterest.msg
-/home/cona/catkin_ws/devel/include/orbbec_camera/GetCameraInfo.h: /opt/ros/noetic/share/sensor_msgs/msg/CameraInfo.msg
 /home/cona/catkin_ws/devel/include/orbbec_camera/GetCameraInfo.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/cona/catkin_ws/devel/include/orbbec_camera/GetCameraInfo.h: /opt/ros/noetic/share/sensor_msgs/msg/CameraInfo.msg
+/home/cona/catkin_ws/devel/include/orbbec_camera/GetCameraInfo.h: /opt/ros/noetic/share/sensor_msgs/msg/RegionOfInterest.msg
 /home/cona/catkin_ws/devel/include/orbbec_camera/GetCameraInfo.h: /opt/ros/noetic/share/gencpp/msg.h.template
 /home/cona/catkin_ws/devel/include/orbbec_camera/GetCameraInfo.h: /opt/ros/noetic/share/gencpp/srv.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/cona/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating C++ code from orbbec_camera/GetCameraInfo.srv"
@@ -129,8 +129,8 @@ OrbbecSDK_ROS1/CMakeFiles/orbbec_camera_generate_messages_cpp: /home/cona/catkin
 
 /home/cona/catkin_ws/devel/include/orbbec_camera/GetDeviceInfo.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/cona/catkin_ws/devel/include/orbbec_camera/GetDeviceInfo.h: /home/cona/catkin_ws/src/OrbbecSDK_ROS1/srv/GetDeviceInfo.srv
-/home/cona/catkin_ws/devel/include/orbbec_camera/GetDeviceInfo.h: /home/cona/catkin_ws/src/OrbbecSDK_ROS1/msg/DeviceInfo.msg
 /home/cona/catkin_ws/devel/include/orbbec_camera/GetDeviceInfo.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/cona/catkin_ws/devel/include/orbbec_camera/GetDeviceInfo.h: /home/cona/catkin_ws/src/OrbbecSDK_ROS1/msg/DeviceInfo.msg
 /home/cona/catkin_ws/devel/include/orbbec_camera/GetDeviceInfo.h: /opt/ros/noetic/share/gencpp/msg.h.template
 /home/cona/catkin_ws/devel/include/orbbec_camera/GetDeviceInfo.h: /opt/ros/noetic/share/gencpp/srv.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/cona/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating C++ code from orbbec_camera/GetDeviceInfo.srv"

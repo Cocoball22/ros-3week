@@ -285,6 +285,32 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
+# Target rules for targets named make_point
+
+# Build rule for target.
+make_point: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 make_point
+.PHONY : make_point
+
+# fast build rule for target.
+make_point/fast:
+	$(MAKE) -f basic_urdf/CMakeFiles/make_point.dir/build.make basic_urdf/CMakeFiles/make_point.dir/build
+.PHONY : make_point/fast
+
+#=============================================================================
+# Target rules for targets named combi_test
+
+# Build rule for target.
+combi_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 combi_test
+.PHONY : combi_test
+
+# fast build rule for target.
+combi_test/fast:
+	$(MAKE) -f basic_urdf/CMakeFiles/combi_test.dir/build.make basic_urdf/CMakeFiles/combi_test.dir/build
+.PHONY : combi_test/fast
+
+#=============================================================================
 # Target rules for targets named my_front_laser
 
 # Build rule for target.
@@ -1775,6 +1801,8 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
+	@echo "... make_point"
+	@echo "... combi_test"
 	@echo "... my_front_laser"
 	@echo "... tf2_msgs_generate_messages_nodejs"
 	@echo "... tf2_msgs_generate_messages_lisp"
