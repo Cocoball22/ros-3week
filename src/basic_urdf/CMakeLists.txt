@@ -9,7 +9,9 @@ project(basic_urdf)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   roscpp
-  tf 
+  std_msgs
+  tf
+  sensor_msgs 
 )
 
 ## System dependencies are found with CMake's conventions
@@ -115,7 +117,6 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 include_directories(
-# include
   ${catkin_INCLUDE_DIRS}
 )
 

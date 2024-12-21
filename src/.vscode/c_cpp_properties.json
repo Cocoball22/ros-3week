@@ -1,17 +1,18 @@
 {
   "configurations": [
     {
+      "name": "Linux",
       "browse": {
         "databaseFilename": "${default}",
         "limitSymbolsToIncludedHeaders": false
       },
       "includePath": [
-        "/opt/ros/noetic/include/**",
+        "${workspaceFolder}/**",
+        "/opt/ros/noetic/include",
         "/usr/include/**"
       ],
-      "name": "ROS",
-      "intelliSenseMode": "gcc-x64",
-      "compilerPath": "/usr/bin/gcc",
+      "intelliSenseMode": "linux-gcc-x64",
+      "compilerPath": "/usr/bin/g++",
       "cStandard": "c17",
       "cppStandard": "c++17"
     }

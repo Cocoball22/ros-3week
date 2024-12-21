@@ -1,5 +1,6 @@
 #include <ros/ros.h>
 #include <tf/transform_listener.h>
+#include <stddef.h>
 
 int main(int argc, char** argv)
 {
