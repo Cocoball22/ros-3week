@@ -12,6 +12,8 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
   tf
   sensor_msgs 
+  OpenCV
+  # cmath
 )
 
 ## System dependencies are found with CMake's conventions
@@ -104,10 +106,10 @@ find_package(catkin REQUIRED COMPONENTS
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
- INCLUDE_DIRS include
- LIBRARIES basic_urdf
- CATKIN_DEPENDS roscpp
- DEPENDS system_lib
+#  INCLUDE_DIRS include
+#  LIBRARIES basic_urdf
+#  CATKIN_DEPENDS roscpp
+#  DEPENDS system_lib
 )
 
 ###########
@@ -154,6 +156,14 @@ add_executable(make_point src/make_point.cpp)
  add_dependencies(make_point ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
  
  target_link_libraries(make_point
+    ${catkin_LIBRARIES}
+)
+
+add_executable(final_depth src/final_depth.cpp)
+ 
+ add_dependencies(final_depth ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+ 
+ target_link_libraries(final_depth
     ${catkin_LIBRARIES}
 )
 

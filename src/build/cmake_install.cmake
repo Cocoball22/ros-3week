@@ -131,9 +131,9 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/cona/catkin_ws/src/build/gtest/cmake_install.cmake")
-  include("/home/cona/catkin_ws/src/build/basic_urdf/cmake_install.cmake")
   include("/home/cona/catkin_ws/src/build/ls01b_v2/cmake_install.cmake")
   include("/home/cona/catkin_ws/src/build/OrbbecSDK_ROS1/cmake_install.cmake")
+  include("/home/cona/catkin_ws/src/build/basic_urdf/cmake_install.cmake")
   include("/home/cona/catkin_ws/src/build/beginner_tutorials/cmake_install.cmake")
 
 endif()

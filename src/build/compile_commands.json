@@ -20,26 +20,6 @@
   "file": "/usr/src/googletest/googletest/src/gtest-all.cc"
 },
 {
-  "directory": "/home/cona/catkin_ws/src/build/basic_urdf",
-  "command": "/usr/bin/g++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"basic_urdf\\\" -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -g   -o CMakeFiles/make_point.dir/src/make_point.cpp.o -c /home/cona/catkin_ws/src/basic_urdf/src/make_point.cpp",
-  "file": "/home/cona/catkin_ws/src/basic_urdf/src/make_point.cpp"
-},
-{
-  "directory": "/home/cona/catkin_ws/src/build/basic_urdf",
-  "command": "/usr/bin/g++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"basic_urdf\\\" -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -g   -o CMakeFiles/combi_test.dir/src/combi_test.cpp.o -c /home/cona/catkin_ws/src/basic_urdf/src/combi_test.cpp",
-  "file": "/home/cona/catkin_ws/src/basic_urdf/src/combi_test.cpp"
-},
-{
-  "directory": "/home/cona/catkin_ws/src/build/basic_urdf",
-  "command": "/usr/bin/g++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"basic_urdf\\\" -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -g   -o CMakeFiles/my_front_laser.dir/src/basic_tf.cpp.o -c /home/cona/catkin_ws/src/basic_urdf/src/basic_tf.cpp",
-  "file": "/home/cona/catkin_ws/src/basic_urdf/src/basic_tf.cpp"
-},
-{
-  "directory": "/home/cona/catkin_ws/src/build/basic_urdf",
-  "command": "/usr/bin/g++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"basic_urdf\\\" -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -g   -o CMakeFiles/basic_urdf_node.dir/src/test_node.cpp.o -c /home/cona/catkin_ws/src/basic_urdf/src/test_node.cpp",
-  "file": "/home/cona/catkin_ws/src/basic_urdf/src/test_node.cpp"
-},
-{
   "directory": "/home/cona/catkin_ws/src/build/ls01b_v2",
   "command": "/usr/bin/g++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"ls01b_v2\\\" -I/home/cona/catkin_ws/src/ls01b_v2/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -std=c++11 -O3 -g   -o CMakeFiles/ls01b_v2.dir/src/lsiosr.cpp.o -c /home/cona/catkin_ws/src/ls01b_v2/src/lsiosr.cpp",
   "file": "/home/cona/catkin_ws/src/ls01b_v2/src/lsiosr.cpp"
@@ -56,48 +36,18 @@
 },
 {
   "directory": "/home/cona/catkin_ws/src/build/OrbbecSDK_ROS1",
-  "command": "/usr/bin/g++  -DBOOST_ALL_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"orbbec_camera\\\" -Dorbbec_camera_EXPORTS -I/home/cona/catkin_ws/src/build/devel/include -I/home/cona/catkin_ws/src/build/OrbbecSDK_ROS1/include -I/home/cona/catkin_ws/src/OrbbecSDK_ROS1/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/cona/catkin_ws/src/OrbbecSDK_ROS1/SDK/include -isystem /usr/include/opencv4   -fPIC -O3 -O3 -DNDEBUG -fPIC   -std=gnu++11 -o CMakeFiles/orbbec_camera.dir/src/d2c_viewer.cpp.o -c /home/cona/catkin_ws/src/OrbbecSDK_ROS1/src/d2c_viewer.cpp",
-  "file": "/home/cona/catkin_ws/src/OrbbecSDK_ROS1/src/d2c_viewer.cpp"
-},
-{
-  "directory": "/home/cona/catkin_ws/src/build/OrbbecSDK_ROS1",
-  "command": "/usr/bin/g++  -DBOOST_ALL_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"orbbec_camera\\\" -Dorbbec_camera_EXPORTS -I/home/cona/catkin_ws/src/build/devel/include -I/home/cona/catkin_ws/src/build/OrbbecSDK_ROS1/include -I/home/cona/catkin_ws/src/OrbbecSDK_ROS1/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/cona/catkin_ws/src/OrbbecSDK_ROS1/SDK/include -isystem /usr/include/opencv4   -fPIC -O3 -O3 -DNDEBUG -fPIC   -std=gnu++11 -o CMakeFiles/orbbec_camera.dir/src/ob_camera_node.cpp.o -c /home/cona/catkin_ws/src/OrbbecSDK_ROS1/src/ob_camera_node.cpp",
-  "file": "/home/cona/catkin_ws/src/OrbbecSDK_ROS1/src/ob_camera_node.cpp"
-},
-{
-  "directory": "/home/cona/catkin_ws/src/build/OrbbecSDK_ROS1",
-  "command": "/usr/bin/g++  -DBOOST_ALL_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"orbbec_camera\\\" -Dorbbec_camera_EXPORTS -I/home/cona/catkin_ws/src/build/devel/include -I/home/cona/catkin_ws/src/build/OrbbecSDK_ROS1/include -I/home/cona/catkin_ws/src/OrbbecSDK_ROS1/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/cona/catkin_ws/src/OrbbecSDK_ROS1/SDK/include -isystem /usr/include/opencv4   -fPIC -O3 -O3 -DNDEBUG -fPIC   -std=gnu++11 -o CMakeFiles/orbbec_camera.dir/src/ob_camera_node_driver.cpp.o -c /home/cona/catkin_ws/src/OrbbecSDK_ROS1/src/ob_camera_node_driver.cpp",
-  "file": "/home/cona/catkin_ws/src/OrbbecSDK_ROS1/src/ob_camera_node_driver.cpp"
-},
-{
-  "directory": "/home/cona/catkin_ws/src/build/OrbbecSDK_ROS1",
-  "command": "/usr/bin/g++  -DBOOST_ALL_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"orbbec_camera\\\" -Dorbbec_camera_EXPORTS -I/home/cona/catkin_ws/src/build/devel/include -I/home/cona/catkin_ws/src/build/OrbbecSDK_ROS1/include -I/home/cona/catkin_ws/src/OrbbecSDK_ROS1/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/cona/catkin_ws/src/OrbbecSDK_ROS1/SDK/include -isystem /usr/include/opencv4   -fPIC -O3 -O3 -DNDEBUG -fPIC   -std=gnu++11 -o CMakeFiles/orbbec_camera.dir/src/ros_sensor.cpp.o -c /home/cona/catkin_ws/src/OrbbecSDK_ROS1/src/ros_sensor.cpp",
-  "file": "/home/cona/catkin_ws/src/OrbbecSDK_ROS1/src/ros_sensor.cpp"
-},
-{
-  "directory": "/home/cona/catkin_ws/src/build/OrbbecSDK_ROS1",
-  "command": "/usr/bin/g++  -DBOOST_ALL_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"orbbec_camera\\\" -Dorbbec_camera_EXPORTS -I/home/cona/catkin_ws/src/build/devel/include -I/home/cona/catkin_ws/src/build/OrbbecSDK_ROS1/include -I/home/cona/catkin_ws/src/OrbbecSDK_ROS1/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/cona/catkin_ws/src/OrbbecSDK_ROS1/SDK/include -isystem /usr/include/opencv4   -fPIC -O3 -O3 -DNDEBUG -fPIC   -std=gnu++11 -o CMakeFiles/orbbec_camera.dir/src/ros_service.cpp.o -c /home/cona/catkin_ws/src/OrbbecSDK_ROS1/src/ros_service.cpp",
-  "file": "/home/cona/catkin_ws/src/OrbbecSDK_ROS1/src/ros_service.cpp"
-},
-{
-  "directory": "/home/cona/catkin_ws/src/build/OrbbecSDK_ROS1",
-  "command": "/usr/bin/g++  -DBOOST_ALL_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"orbbec_camera\\\" -Dorbbec_camera_EXPORTS -I/home/cona/catkin_ws/src/build/devel/include -I/home/cona/catkin_ws/src/build/OrbbecSDK_ROS1/include -I/home/cona/catkin_ws/src/OrbbecSDK_ROS1/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/cona/catkin_ws/src/OrbbecSDK_ROS1/SDK/include -isystem /usr/include/opencv4   -fPIC -O3 -O3 -DNDEBUG -fPIC   -std=gnu++11 -o CMakeFiles/orbbec_camera.dir/src/utils.cpp.o -c /home/cona/catkin_ws/src/OrbbecSDK_ROS1/src/utils.cpp",
-  "file": "/home/cona/catkin_ws/src/OrbbecSDK_ROS1/src/utils.cpp"
-},
-{
-  "directory": "/home/cona/catkin_ws/src/build/OrbbecSDK_ROS1",
-  "command": "/usr/bin/g++  -DBOOST_ALL_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"orbbec_camera\\\" -Dorbbec_camera_EXPORTS -I/home/cona/catkin_ws/src/build/devel/include -I/home/cona/catkin_ws/src/build/OrbbecSDK_ROS1/include -I/home/cona/catkin_ws/src/OrbbecSDK_ROS1/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/cona/catkin_ws/src/OrbbecSDK_ROS1/SDK/include -isystem /usr/include/opencv4   -fPIC -O3 -O3 -DNDEBUG -fPIC   -std=gnu++11 -o CMakeFiles/orbbec_camera.dir/src/ros_setup.cpp.o -c /home/cona/catkin_ws/src/OrbbecSDK_ROS1/src/ros_setup.cpp",
-  "file": "/home/cona/catkin_ws/src/OrbbecSDK_ROS1/src/ros_setup.cpp"
-},
-{
-  "directory": "/home/cona/catkin_ws/src/build/OrbbecSDK_ROS1",
-  "command": "/usr/bin/g++  -DBOOST_ALL_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"orbbec_camera\\\" -Dorbbec_camera_EXPORTS -I/home/cona/catkin_ws/src/build/devel/include -I/home/cona/catkin_ws/src/build/OrbbecSDK_ROS1/include -I/home/cona/catkin_ws/src/OrbbecSDK_ROS1/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/cona/catkin_ws/src/OrbbecSDK_ROS1/SDK/include -isystem /usr/include/opencv4   -fPIC -O3 -O3 -DNDEBUG -fPIC   -std=gnu++11 -o CMakeFiles/orbbec_camera.dir/src/jpeg_decoder.cpp.o -c /home/cona/catkin_ws/src/OrbbecSDK_ROS1/src/jpeg_decoder.cpp",
-  "file": "/home/cona/catkin_ws/src/OrbbecSDK_ROS1/src/jpeg_decoder.cpp"
-},
-{
-  "directory": "/home/cona/catkin_ws/src/build/OrbbecSDK_ROS1",
   "command": "/usr/bin/g++  -DBOOST_ALL_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"orbbec_camera\\\" -I/home/cona/catkin_ws/src/build/devel/include -I/home/cona/catkin_ws/src/build/OrbbecSDK_ROS1/include -I/home/cona/catkin_ws/src/OrbbecSDK_ROS1/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/cona/catkin_ws/src/OrbbecSDK_ROS1/SDK/include -isystem /usr/include/opencv4   -fPIC -O3 -O3 -DNDEBUG   -std=gnu++11 -o CMakeFiles/list_camera_profile_mode_node.dir/src/list_camera_profile_mode.cpp.o -c /home/cona/catkin_ws/src/OrbbecSDK_ROS1/src/list_camera_profile_mode.cpp",
   "file": "/home/cona/catkin_ws/src/OrbbecSDK_ROS1/src/list_camera_profile_mode.cpp"
+},
+{
+  "directory": "/home/cona/catkin_ws/src/build/OrbbecSDK_ROS1",
+  "command": "/usr/bin/g++  -DBOOST_ALL_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"orbbec_camera\\\" -I/home/cona/catkin_ws/src/build/devel/include -I/home/cona/catkin_ws/src/build/OrbbecSDK_ROS1/include -I/home/cona/catkin_ws/src/OrbbecSDK_ROS1/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/cona/catkin_ws/src/OrbbecSDK_ROS1/SDK/include -isystem /usr/include/opencv4   -fPIC -O3 -O3 -DNDEBUG   -std=gnu++11 -o CMakeFiles/list_depth_work_mode_node.dir/src/list_depth_work_mode.cpp.o -c /home/cona/catkin_ws/src/OrbbecSDK_ROS1/src/list_depth_work_mode.cpp",
+  "file": "/home/cona/catkin_ws/src/OrbbecSDK_ROS1/src/list_depth_work_mode.cpp"
+},
+{
+  "directory": "/home/cona/catkin_ws/src/build/OrbbecSDK_ROS1",
+  "command": "/usr/bin/g++  -DBOOST_ALL_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"orbbec_camera\\\" -I/home/cona/catkin_ws/src/build/devel/include -I/home/cona/catkin_ws/src/build/OrbbecSDK_ROS1/include -I/home/cona/catkin_ws/src/OrbbecSDK_ROS1/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/cona/catkin_ws/src/OrbbecSDK_ROS1/SDK/include -isystem /usr/include/opencv4   -fPIC -O3 -O3 -DNDEBUG   -std=gnu++11 -o CMakeFiles/list_devices_node.dir/src/list_devices_node.cpp.o -c /home/cona/catkin_ws/src/OrbbecSDK_ROS1/src/list_devices_node.cpp",
+  "file": "/home/cona/catkin_ws/src/OrbbecSDK_ROS1/src/list_devices_node.cpp"
 },
 {
   "directory": "/home/cona/catkin_ws/src/build/OrbbecSDK_ROS1",
@@ -146,18 +96,73 @@
 },
 {
   "directory": "/home/cona/catkin_ws/src/build/OrbbecSDK_ROS1",
-  "command": "/usr/bin/g++  -DBOOST_ALL_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"orbbec_camera\\\" -I/home/cona/catkin_ws/src/build/devel/include -I/home/cona/catkin_ws/src/build/OrbbecSDK_ROS1/include -I/home/cona/catkin_ws/src/OrbbecSDK_ROS1/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/cona/catkin_ws/src/OrbbecSDK_ROS1/SDK/include -isystem /usr/include/opencv4   -fPIC -O3 -O3 -DNDEBUG   -std=gnu++11 -o CMakeFiles/list_devices_node.dir/src/list_devices_node.cpp.o -c /home/cona/catkin_ws/src/OrbbecSDK_ROS1/src/list_devices_node.cpp",
-  "file": "/home/cona/catkin_ws/src/OrbbecSDK_ROS1/src/list_devices_node.cpp"
+  "command": "/usr/bin/g++  -DBOOST_ALL_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"orbbec_camera\\\" -Dorbbec_camera_EXPORTS -I/home/cona/catkin_ws/src/build/devel/include -I/home/cona/catkin_ws/src/build/OrbbecSDK_ROS1/include -I/home/cona/catkin_ws/src/OrbbecSDK_ROS1/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/cona/catkin_ws/src/OrbbecSDK_ROS1/SDK/include -isystem /usr/include/opencv4   -fPIC -O3 -O3 -DNDEBUG -fPIC   -std=gnu++11 -o CMakeFiles/orbbec_camera.dir/src/d2c_viewer.cpp.o -c /home/cona/catkin_ws/src/OrbbecSDK_ROS1/src/d2c_viewer.cpp",
+  "file": "/home/cona/catkin_ws/src/OrbbecSDK_ROS1/src/d2c_viewer.cpp"
 },
 {
   "directory": "/home/cona/catkin_ws/src/build/OrbbecSDK_ROS1",
-  "command": "/usr/bin/g++  -DBOOST_ALL_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"orbbec_camera\\\" -I/home/cona/catkin_ws/src/build/devel/include -I/home/cona/catkin_ws/src/build/OrbbecSDK_ROS1/include -I/home/cona/catkin_ws/src/OrbbecSDK_ROS1/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/cona/catkin_ws/src/OrbbecSDK_ROS1/SDK/include -isystem /usr/include/opencv4   -fPIC -O3 -O3 -DNDEBUG   -std=gnu++11 -o CMakeFiles/list_depth_work_mode_node.dir/src/list_depth_work_mode.cpp.o -c /home/cona/catkin_ws/src/OrbbecSDK_ROS1/src/list_depth_work_mode.cpp",
-  "file": "/home/cona/catkin_ws/src/OrbbecSDK_ROS1/src/list_depth_work_mode.cpp"
+  "command": "/usr/bin/g++  -DBOOST_ALL_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"orbbec_camera\\\" -Dorbbec_camera_EXPORTS -I/home/cona/catkin_ws/src/build/devel/include -I/home/cona/catkin_ws/src/build/OrbbecSDK_ROS1/include -I/home/cona/catkin_ws/src/OrbbecSDK_ROS1/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/cona/catkin_ws/src/OrbbecSDK_ROS1/SDK/include -isystem /usr/include/opencv4   -fPIC -O3 -O3 -DNDEBUG -fPIC   -std=gnu++11 -o CMakeFiles/orbbec_camera.dir/src/ob_camera_node.cpp.o -c /home/cona/catkin_ws/src/OrbbecSDK_ROS1/src/ob_camera_node.cpp",
+  "file": "/home/cona/catkin_ws/src/OrbbecSDK_ROS1/src/ob_camera_node.cpp"
+},
+{
+  "directory": "/home/cona/catkin_ws/src/build/OrbbecSDK_ROS1",
+  "command": "/usr/bin/g++  -DBOOST_ALL_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"orbbec_camera\\\" -Dorbbec_camera_EXPORTS -I/home/cona/catkin_ws/src/build/devel/include -I/home/cona/catkin_ws/src/build/OrbbecSDK_ROS1/include -I/home/cona/catkin_ws/src/OrbbecSDK_ROS1/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/cona/catkin_ws/src/OrbbecSDK_ROS1/SDK/include -isystem /usr/include/opencv4   -fPIC -O3 -O3 -DNDEBUG -fPIC   -std=gnu++11 -o CMakeFiles/orbbec_camera.dir/src/ob_camera_node_driver.cpp.o -c /home/cona/catkin_ws/src/OrbbecSDK_ROS1/src/ob_camera_node_driver.cpp",
+  "file": "/home/cona/catkin_ws/src/OrbbecSDK_ROS1/src/ob_camera_node_driver.cpp"
+},
+{
+  "directory": "/home/cona/catkin_ws/src/build/OrbbecSDK_ROS1",
+  "command": "/usr/bin/g++  -DBOOST_ALL_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"orbbec_camera\\\" -Dorbbec_camera_EXPORTS -I/home/cona/catkin_ws/src/build/devel/include -I/home/cona/catkin_ws/src/build/OrbbecSDK_ROS1/include -I/home/cona/catkin_ws/src/OrbbecSDK_ROS1/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/cona/catkin_ws/src/OrbbecSDK_ROS1/SDK/include -isystem /usr/include/opencv4   -fPIC -O3 -O3 -DNDEBUG -fPIC   -std=gnu++11 -o CMakeFiles/orbbec_camera.dir/src/ros_sensor.cpp.o -c /home/cona/catkin_ws/src/OrbbecSDK_ROS1/src/ros_sensor.cpp",
+  "file": "/home/cona/catkin_ws/src/OrbbecSDK_ROS1/src/ros_sensor.cpp"
+},
+{
+  "directory": "/home/cona/catkin_ws/src/build/OrbbecSDK_ROS1",
+  "command": "/usr/bin/g++  -DBOOST_ALL_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"orbbec_camera\\\" -Dorbbec_camera_EXPORTS -I/home/cona/catkin_ws/src/build/devel/include -I/home/cona/catkin_ws/src/build/OrbbecSDK_ROS1/include -I/home/cona/catkin_ws/src/OrbbecSDK_ROS1/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/cona/catkin_ws/src/OrbbecSDK_ROS1/SDK/include -isystem /usr/include/opencv4   -fPIC -O3 -O3 -DNDEBUG -fPIC   -std=gnu++11 -o CMakeFiles/orbbec_camera.dir/src/ros_service.cpp.o -c /home/cona/catkin_ws/src/OrbbecSDK_ROS1/src/ros_service.cpp",
+  "file": "/home/cona/catkin_ws/src/OrbbecSDK_ROS1/src/ros_service.cpp"
+},
+{
+  "directory": "/home/cona/catkin_ws/src/build/OrbbecSDK_ROS1",
+  "command": "/usr/bin/g++  -DBOOST_ALL_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"orbbec_camera\\\" -Dorbbec_camera_EXPORTS -I/home/cona/catkin_ws/src/build/devel/include -I/home/cona/catkin_ws/src/build/OrbbecSDK_ROS1/include -I/home/cona/catkin_ws/src/OrbbecSDK_ROS1/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/cona/catkin_ws/src/OrbbecSDK_ROS1/SDK/include -isystem /usr/include/opencv4   -fPIC -O3 -O3 -DNDEBUG -fPIC   -std=gnu++11 -o CMakeFiles/orbbec_camera.dir/src/utils.cpp.o -c /home/cona/catkin_ws/src/OrbbecSDK_ROS1/src/utils.cpp",
+  "file": "/home/cona/catkin_ws/src/OrbbecSDK_ROS1/src/utils.cpp"
+},
+{
+  "directory": "/home/cona/catkin_ws/src/build/OrbbecSDK_ROS1",
+  "command": "/usr/bin/g++  -DBOOST_ALL_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"orbbec_camera\\\" -Dorbbec_camera_EXPORTS -I/home/cona/catkin_ws/src/build/devel/include -I/home/cona/catkin_ws/src/build/OrbbecSDK_ROS1/include -I/home/cona/catkin_ws/src/OrbbecSDK_ROS1/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/cona/catkin_ws/src/OrbbecSDK_ROS1/SDK/include -isystem /usr/include/opencv4   -fPIC -O3 -O3 -DNDEBUG -fPIC   -std=gnu++11 -o CMakeFiles/orbbec_camera.dir/src/ros_setup.cpp.o -c /home/cona/catkin_ws/src/OrbbecSDK_ROS1/src/ros_setup.cpp",
+  "file": "/home/cona/catkin_ws/src/OrbbecSDK_ROS1/src/ros_setup.cpp"
+},
+{
+  "directory": "/home/cona/catkin_ws/src/build/OrbbecSDK_ROS1",
+  "command": "/usr/bin/g++  -DBOOST_ALL_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"orbbec_camera\\\" -Dorbbec_camera_EXPORTS -I/home/cona/catkin_ws/src/build/devel/include -I/home/cona/catkin_ws/src/build/OrbbecSDK_ROS1/include -I/home/cona/catkin_ws/src/OrbbecSDK_ROS1/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/cona/catkin_ws/src/OrbbecSDK_ROS1/SDK/include -isystem /usr/include/opencv4   -fPIC -O3 -O3 -DNDEBUG -fPIC   -std=gnu++11 -o CMakeFiles/orbbec_camera.dir/src/jpeg_decoder.cpp.o -c /home/cona/catkin_ws/src/OrbbecSDK_ROS1/src/jpeg_decoder.cpp",
+  "file": "/home/cona/catkin_ws/src/OrbbecSDK_ROS1/src/jpeg_decoder.cpp"
 },
 {
   "directory": "/home/cona/catkin_ws/src/build/OrbbecSDK_ROS1",
   "command": "/usr/bin/g++  -DBOOST_ALL_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"orbbec_camera\\\" -I/home/cona/catkin_ws/src/build/devel/include -I/home/cona/catkin_ws/src/build/OrbbecSDK_ROS1/include -I/home/cona/catkin_ws/src/OrbbecSDK_ROS1/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/cona/catkin_ws/src/OrbbecSDK_ROS1/SDK/include -isystem /usr/include/opencv4   -fPIC -O3 -O3 -DNDEBUG   -std=gnu++11 -o CMakeFiles/orbbec_camera_node.dir/src/main.cpp.o -c /home/cona/catkin_ws/src/OrbbecSDK_ROS1/src/main.cpp",
   "file": "/home/cona/catkin_ws/src/OrbbecSDK_ROS1/src/main.cpp"
+},
+{
+  "directory": "/home/cona/catkin_ws/src/build/basic_urdf",
+  "command": "/usr/bin/g++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"basic_urdf\\\" -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -isystem /usr/include/opencv4  -g   -o CMakeFiles/final_depth.dir/src/final_depth.cpp.o -c /home/cona/catkin_ws/src/basic_urdf/src/final_depth.cpp",
+  "file": "/home/cona/catkin_ws/src/basic_urdf/src/final_depth.cpp"
+},
+{
+  "directory": "/home/cona/catkin_ws/src/build/basic_urdf",
+  "command": "/usr/bin/g++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"basic_urdf\\\" -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -isystem /usr/include/opencv4  -g   -o CMakeFiles/basic_urdf_node.dir/src/test_node.cpp.o -c /home/cona/catkin_ws/src/basic_urdf/src/test_node.cpp",
+  "file": "/home/cona/catkin_ws/src/basic_urdf/src/test_node.cpp"
+},
+{
+  "directory": "/home/cona/catkin_ws/src/build/basic_urdf",
+  "command": "/usr/bin/g++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"basic_urdf\\\" -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -isystem /usr/include/opencv4  -g   -o CMakeFiles/my_front_laser.dir/src/basic_tf.cpp.o -c /home/cona/catkin_ws/src/basic_urdf/src/basic_tf.cpp",
+  "file": "/home/cona/catkin_ws/src/basic_urdf/src/basic_tf.cpp"
+},
+{
+  "directory": "/home/cona/catkin_ws/src/build/basic_urdf",
+  "command": "/usr/bin/g++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"basic_urdf\\\" -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -isystem /usr/include/opencv4  -g   -o CMakeFiles/combi_test.dir/src/combi_test.cpp.o -c /home/cona/catkin_ws/src/basic_urdf/src/combi_test.cpp",
+  "file": "/home/cona/catkin_ws/src/basic_urdf/src/combi_test.cpp"
+},
+{
+  "directory": "/home/cona/catkin_ws/src/build/basic_urdf",
+  "command": "/usr/bin/g++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"basic_urdf\\\" -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -isystem /usr/include/opencv4  -g   -o CMakeFiles/make_point.dir/src/make_point.cpp.o -c /home/cona/catkin_ws/src/basic_urdf/src/make_point.cpp",
+  "file": "/home/cona/catkin_ws/src/basic_urdf/src/make_point.cpp"
 },
 {
   "directory": "/home/cona/catkin_ws/src/build/beginner_tutorials",

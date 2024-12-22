@@ -3,6 +3,6 @@ prefix=/usr/local
 Name: basic_urdf
 Description: Description of basic_urdf
 Version: 0.0.0
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib -lbasic_urdf
-Requires: roscpp
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

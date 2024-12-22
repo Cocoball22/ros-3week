@@ -19,8 +19,8 @@ private:
 public:
     make_point()
     {
-      scan_sub = nh.subscribe("scan1", 1, &make_point::counterCallback, this);
-      cloud_pub = nh.advertise<sensor_msgs::PointCloud>("revised_scan1",1);
+      scan_sub = nh.subscribe("/scan1", 1, &make_point::counterCallback, this);
+      cloud_pub = nh.advertise<sensor_msgs::PointCloud>("/revised_scan1",1);
 
       try
       {
