@@ -1,7 +1,7 @@
 {
   "configurations": [
     {
-      "name": "Linux",
+      
       "browse": {
         "databaseFilename": "${default}",
         "limitSymbolsToIncludedHeaders": false
@@ -9,10 +9,12 @@
       "includePath": [
         "${workspaceFolder}/**",
         "/opt/ros/noetic/include",
+        "/cona/catkin_ws/devel/include",
         "/usr/include/**"
       ],
-      "intelliSenseMode": "linux-gcc-x64",
-      "compilerPath": "/usr/bin/g++",
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
       "cStandard": "gnu11",
       "cppStandard": "c++17"
     }

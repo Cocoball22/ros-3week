@@ -467,9 +467,6 @@ catkin_DIR:PATH=/opt/ros/noetic/share/catkin/cmake
 //The directory containing a CMake configuration file for class_loader.
 class_loader_DIR:PATH=/opt/ros/noetic/share/class_loader/cmake
 
-//The directory containing a CMake configuration file for cmath.
-cmath_DIR:PATH=cmath_DIR-NOTFOUND
-
 //The directory containing a CMake configuration file for cpp_common.
 cpp_common_DIR:PATH=/opt/ros/noetic/share/cpp_common/cmake
 
@@ -579,9 +576,6 @@ message_runtime_DIR:PATH=/opt/ros/noetic/share/message_runtime/cmake
 //The directory containing a CMake configuration file for nodelet.
 nodelet_DIR:PATH=/opt/ros/noetic/share/nodelet/cmake
 
-//The directory containing a CMake configuration file for opencv2.
-opencv2_DIR:PATH=opencv2_DIR-NOTFOUND
-
 //Value Computed by CMake
 orbbec_camera_BINARY_DIR:STATIC=/home/cona/catkin_ws/build/OrbbecSDK_ROS1
 
@@ -596,9 +590,6 @@ orbbec_camera_nodelet_LIB_DEPENDS:STATIC=general;/opt/ros/noetic/lib/libcamera_i
 
 //The directory containing a CMake configuration file for pluginlib.
 pluginlib_DIR:PATH=/opt/ros/noetic/share/pluginlib/cmake
-
-//The directory containing a CMake configuration file for point_cloud2_iterator.
-point_cloud2_iterator_DIR:PATH=point_cloud2_iterator_DIR-NOTFOUND
 
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/noetic/share/rosconsole/cmake

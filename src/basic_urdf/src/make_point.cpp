@@ -1,6 +1,6 @@
 #include <ros/ros.h>
-#include <tf/transform_listener.h>
-#include <sensor_msgs/LaserScan.h>
+#include <tf/transform_listener.h> // tf::TransformListener를 생성하는데 필요한 헤더파일 
+#include <sensor_msgs/LaserScan.h> // 
 #include <sensor_msgs/PointCloud.h>
 #include <tf/tf.h>
 #include <cmath>
@@ -11,29 +11,25 @@ private:
     ros::NodeHandle nh;
     ros::Subscriber scan_sub;
     ros::Publisher cloud_pub;
-    tf::StampedTransform transform;
+    tf::StampedTransform transform; // tf::
     tf::TransformListener listener;
-    tf::Matrix3x3 R; 
-    tf::Vector3 T;
+    tf::Matrix3x3 Rotation; 
+    tf::Vector3 Translation;
     
 public:
     make_point()
     {
-      scan_sub = nh.subscribe("/scan1", 1, &make_point::counterCallback, this);
-      cloud_pub = nh.advertise<sensor_msgs::PointCloud>("/revised_scan1",1);
+      scan_sub = nh.subscribe("/scan1", 1, &make_point::counterCallback, this); 
+      cloud_pub = nh.advertise<sensor_msgs::PointCloud>("/revised_scan1",1); // 스캐닝 레이져의 pointcloud
 
       try
       {
         listener.waitForTransform("base_link", "front_laser", ros::Time(0), ros::Duration(3.0));
         listener.lookupTransform("base_link","front_laser", ros::Time(0), transform); // --> ros::Time(0),
 
-        R = tf::Matrix3x3(transform.getRotation()); // 회전 정보를 쿼터니언으로 반환
-        T = tf::Vector3(transform.getOrigin().x(),transform.getOrigin().y(),transform.getOrigin().z()); // base_link 프레임을 기준
-        ROS_INFO("Transform matrix_1: [%f, %f, %f]\n\r", R[0][0], R[0][1], R[0][2]);
-        ROS_INFO("Transform matrix_2: [%f, %f, %f]\n\r", R[1][0], R[1][1], R[1][2]);
-        ROS_INFO("Transform matrix_3: [%f, %f, %f]\n\r", R[2][0], R[2][1], R[2][2]);
-        ROS_INFO("Translation vector: [%f, %f, %f]\n\r", T.x(), T.y(), T.z());
-
+        Rotation = tf::Matrix3x3(transform.getRotation()); // 회전 정보를 쿼터니언으로 반환
+        Translation = tf::Vector3(transform.getOrigin().x(),transform.getOrigin().y(),transform.getOrigin().z()); // base_link 프레임을 기준
+      
       }
       catch(tf::TransformException ex)
         {
@@ -48,12 +44,13 @@ public:
       float r,theta;
       
       tf::Vector3 laser_point, point_out; // 회전 적용
-      sensor_msgs::PointCloud cloud;
-      geometry_msgs::Point32 point_out_;
-      int ranges_size = msg->ranges.size();
+      sensor_msgs::PointCloud cloud;      // 카메라, 스캐닝 레이저 거리 측적기 등 일반적으로 사용되는 센서에 대한 메시지, 3차원 포인트 컬랙션
+      geometry_msgs::Point32 point_out_; // 점, 벡터, 포즈와 같은 일반적인 가하학적 기본 요소에 대한 메시지
+
+      int ranges_size = msg->ranges.size(); // 
      
-      cloud.header.stamp = ros::Time::now();
-      cloud.header.frame_id = "base_link";
+      cloud.header.stamp = ros::Time::now(); // 센서 데이터 수집 시간
+      cloud.header.frame_id = "base_link";   // 좌표 프레임 ID
 
       cloud.points.resize(ranges_size);
 
@@ -76,7 +73,7 @@ public:
          
           laser_point.setValue(x, y, z);  // 한 줄로 값을 할당
 
-          point_out = R * laser_point + T;
+          point_out = Rotation * laser_point + Translation;
 
           point_out_.x = point_out.x();
           point_out_.y = point_out.y();

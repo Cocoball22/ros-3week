@@ -113,17 +113,6 @@ test/fast: test
 
 .PHONY : test/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -134,6 +123,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -317,6 +317,21 @@ make_point/fast:
 	cd /home/cona/catkin_ws/src/build && $(MAKE) -f basic_urdf/CMakeFiles/make_point.dir/build.make basic_urdf/CMakeFiles/make_point.dir/build
 .PHONY : make_point/fast
 
+# Convenience name for target.
+basic_urdf/CMakeFiles/final_depth_test.dir/rule:
+	cd /home/cona/catkin_ws/src/build && $(MAKE) -f CMakeFiles/Makefile2 basic_urdf/CMakeFiles/final_depth_test.dir/rule
+.PHONY : basic_urdf/CMakeFiles/final_depth_test.dir/rule
+
+# Convenience name for target.
+final_depth_test: basic_urdf/CMakeFiles/final_depth_test.dir/rule
+
+.PHONY : final_depth_test
+
+# fast build rule for target.
+final_depth_test/fast:
+	cd /home/cona/catkin_ws/src/build && $(MAKE) -f basic_urdf/CMakeFiles/final_depth_test.dir/build.make basic_urdf/CMakeFiles/final_depth_test.dir/build
+.PHONY : final_depth_test/fast
+
 src/basic_tf.o: src/basic_tf.cpp.o
 
 .PHONY : src/basic_tf.o
@@ -398,6 +413,33 @@ src/final_depth.cpp.s:
 	cd /home/cona/catkin_ws/src/build && $(MAKE) -f basic_urdf/CMakeFiles/final_depth.dir/build.make basic_urdf/CMakeFiles/final_depth.dir/src/final_depth.cpp.s
 .PHONY : src/final_depth.cpp.s
 
+src/final_depth_copy.o: src/final_depth_copy.cpp.o
+
+.PHONY : src/final_depth_copy.o
+
+# target to build an object file
+src/final_depth_copy.cpp.o:
+	cd /home/cona/catkin_ws/src/build && $(MAKE) -f basic_urdf/CMakeFiles/final_depth_test.dir/build.make basic_urdf/CMakeFiles/final_depth_test.dir/src/final_depth_copy.cpp.o
+.PHONY : src/final_depth_copy.cpp.o
+
+src/final_depth_copy.i: src/final_depth_copy.cpp.i
+
+.PHONY : src/final_depth_copy.i
+
+# target to preprocess a source file
+src/final_depth_copy.cpp.i:
+	cd /home/cona/catkin_ws/src/build && $(MAKE) -f basic_urdf/CMakeFiles/final_depth_test.dir/build.make basic_urdf/CMakeFiles/final_depth_test.dir/src/final_depth_copy.cpp.i
+.PHONY : src/final_depth_copy.cpp.i
+
+src/final_depth_copy.s: src/final_depth_copy.cpp.s
+
+.PHONY : src/final_depth_copy.s
+
+# target to generate assembly for a file
+src/final_depth_copy.cpp.s:
+	cd /home/cona/catkin_ws/src/build && $(MAKE) -f basic_urdf/CMakeFiles/final_depth_test.dir/build.make basic_urdf/CMakeFiles/final_depth_test.dir/src/final_depth_copy.cpp.s
+.PHONY : src/final_depth_copy.cpp.s
+
 src/make_point.o: src/make_point.cpp.o
 
 .PHONY : src/make_point.o
@@ -470,11 +512,12 @@ help:
 	@echo "... basic_urdf_node"
 	@echo "... my_front_laser"
 	@echo "... test"
+	@echo "... rebuild_cache"
+	@echo "... edit_cache"
 	@echo "... combi_test"
 	@echo "... tf_generate_messages_lisp"
 	@echo "... make_point"
-	@echo "... edit_cache"
-	@echo "... rebuild_cache"
+	@echo "... final_depth_test"
 	@echo "... src/basic_tf.o"
 	@echo "... src/basic_tf.i"
 	@echo "... src/basic_tf.s"
@@ -484,6 +527,9 @@ help:
 	@echo "... src/final_depth.o"
 	@echo "... src/final_depth.i"
 	@echo "... src/final_depth.s"
+	@echo "... src/final_depth_copy.o"
+	@echo "... src/final_depth_copy.i"
+	@echo "... src/final_depth_copy.s"
 	@echo "... src/make_point.o"
 	@echo "... src/make_point.i"
 	@echo "... src/make_point.s"

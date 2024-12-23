@@ -151,7 +151,9 @@ add_executable(combi_test src/combi_test.cpp)
     ${catkin_LIBRARIES}
 )
 
-add_executable(make_point src/make_point.cpp)
+add_executable(make_point src/main.cpp
+                          src/function.cpp)
+ 
  
  add_dependencies(make_point ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
  
@@ -164,6 +166,14 @@ add_executable(final_depth src/final_depth.cpp)
  add_dependencies(final_depth ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
  
  target_link_libraries(final_depth
+    ${catkin_LIBRARIES}
+)
+
+add_executable(final_depth_test src/final_depth_copy.cpp)
+ 
+ add_dependencies(final_depth_test ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+ 
+ target_link_libraries(final_depth_test
     ${catkin_LIBRARIES}
 )
 

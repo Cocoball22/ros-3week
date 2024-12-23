@@ -165,6 +165,11 @@
   "file": "/home/cona/catkin_ws/src/basic_urdf/src/make_point.cpp"
 },
 {
+  "directory": "/home/cona/catkin_ws/src/build/basic_urdf",
+  "command": "/usr/bin/g++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"basic_urdf\\\" -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -isystem /usr/include/opencv4  -g   -o CMakeFiles/final_depth_test.dir/src/final_depth_copy.cpp.o -c /home/cona/catkin_ws/src/basic_urdf/src/final_depth_copy.cpp",
+  "file": "/home/cona/catkin_ws/src/basic_urdf/src/final_depth_copy.cpp"
+},
+{
   "directory": "/home/cona/catkin_ws/src/build/beginner_tutorials",
   "command": "/usr/bin/g++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"beginner_tutorials\\\" -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -g   -o CMakeFiles/Trigger_Button.dir/src/Trigger.cpp.o -c /home/cona/catkin_ws/src/beginner_tutorials/src/Trigger.cpp",
   "file": "/home/cona/catkin_ws/src/beginner_tutorials/src/Trigger.cpp"

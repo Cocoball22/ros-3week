@@ -1676,6 +1676,19 @@ make_point/fast:
 .PHONY : make_point/fast
 
 #=============================================================================
+# Target rules for targets named final_depth_test
+
+# Build rule for target.
+final_depth_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 final_depth_test
+.PHONY : final_depth_test
+
+# fast build rule for target.
+final_depth_test/fast:
+	$(MAKE) -f basic_urdf/CMakeFiles/final_depth_test.dir/build.make basic_urdf/CMakeFiles/final_depth_test.dir/build
+.PHONY : final_depth_test/fast
+
+#=============================================================================
 # Target rules for targets named turtlesim_generate_messages_cpp
 
 # Build rule for target.
@@ -1921,6 +1934,7 @@ help:
 	@echo "... combi_test"
 	@echo "... tf_generate_messages_lisp"
 	@echo "... make_point"
+	@echo "... final_depth_test"
 	@echo "... turtlesim_generate_messages_cpp"
 	@echo "... turtlesim_generate_messages_eus"
 	@echo "... Trigger_Button"

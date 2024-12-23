@@ -16,8 +16,8 @@ private:
     ros::Publisher cloud_pub, depth_pub;
     tf::StampedTransform tf_scan,tf_depth;
     tf::TransformListener listener;
-    tf::Matrix3x3 R,R_; 
-    tf::Vector3 T,T_;
+    tf::Matrix3x3 R,rotation_depth; 
+    tf::Vector3 T,translation_depth;
     cv::Mat RGBD_data;
     cv::Mat D_data;
 public:
@@ -36,11 +36,11 @@ public:
         R = tf::Matrix3x3(tf_scan.getRotation()); // 회전 정보를 쿼터니언으로 반환
         T = tf::Vector3(tf_scan.getOrigin().x(),tf_scan.getOrigin().y(),tf_scan.getOrigin().z()); // base_link 프레임을 기준
 
-        listener.waitForTransform("base_link", "camera_link", ros::Time(0), ros::Duration(3.0));
-        listener.lookupTransform("base_link","camera_link", ros::Time(0), tf_depth); // --> ros::Time(0),
+        listener.waitForTransform("base_link", "camera_depth_optical_frame", ros::Time(0), ros::Duration(3.0));
+        listener.lookupTransform("base_link","camera_depth_optical_frame", ros::Time(0), tf_depth); // --> ros::Time(0),
 
-        R_ = tf::Matrix3x3(tf_depth.getRotation()); // 회전 정보를 쿼터니언으로 반환
-        T_ = tf::Vector3(tf_depth.getOrigin().x(),tf_depth.getOrigin().y(),tf_depth.getOrigin().z()); // base_link 프레임을 기준
+        rotation_depth = tf::Matrix3x3(tf_depth.getRotation()); // 회전 정보를 쿼터니언으로 반환
+        translation_depth = tf::Vector3(tf_depth.getOrigin().x(),tf_depth.getOrigin().y(),tf_depth.getOrigin().z()); // base_link 프레임을 기준
       }
       catch(tf::TransformException ex)
         {
@@ -86,7 +86,7 @@ public:
             for (int c_num = 0; c_num < depth_msg->width ; ++c_num)
             {
 
-                ROS_INFO("Row %d Col %d: \n",r_num,c_num);
+                // ROS_INFO("Row %d Col %d: \n",r_num,c_num);
                 // Store the XYZ data in the OpenCV matrix
                 RGBD_data.at<cv::Vec3f>(r_num, c_num)[0] = *D_iter_x;
                 RGBD_data.at<cv::Vec3f>(r_num, c_num)[1] = *D_iter_y;
@@ -116,7 +116,7 @@ public:
                 point = RGBD_data.at<cv::Vec3f>(r, c);
 
                 tf::Vector3 origin_point(point[0], point[1], point[2]);
-                transformed_point = R_ * origin_point + T_;
+                transformed_point = rotation_depth * origin_point + translation_depth;
 
                 // ROS_INFO("Row %d Col %d: Original Point [%f, %f, %f] -> Transformed Point [%f, %f, %f] \n",
                 //  r, c, origin_point.x(), origin_point.y(), origin_point.z(),
