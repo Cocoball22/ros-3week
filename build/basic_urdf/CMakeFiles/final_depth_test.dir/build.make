@@ -57,27 +57,42 @@ include basic_urdf/CMakeFiles/final_depth_test.dir/progress.make
 # Include the compile flags for this target's objects.
 include basic_urdf/CMakeFiles/final_depth_test.dir/flags.make
 
-basic_urdf/CMakeFiles/final_depth_test.dir/src/final_depth_copy.cpp.o: basic_urdf/CMakeFiles/final_depth_test.dir/flags.make
-basic_urdf/CMakeFiles/final_depth_test.dir/src/final_depth_copy.cpp.o: /home/cona/catkin_ws/src/basic_urdf/src/final_depth_copy.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cona/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object basic_urdf/CMakeFiles/final_depth_test.dir/src/final_depth_copy.cpp.o"
-	cd /home/cona/catkin_ws/build/basic_urdf && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/final_depth_test.dir/src/final_depth_copy.cpp.o -c /home/cona/catkin_ws/src/basic_urdf/src/final_depth_copy.cpp
+basic_urdf/CMakeFiles/final_depth_test.dir/src/main_depth.cpp.o: basic_urdf/CMakeFiles/final_depth_test.dir/flags.make
+basic_urdf/CMakeFiles/final_depth_test.dir/src/main_depth.cpp.o: /home/cona/catkin_ws/src/basic_urdf/src/main_depth.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cona/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object basic_urdf/CMakeFiles/final_depth_test.dir/src/main_depth.cpp.o"
+	cd /home/cona/catkin_ws/build/basic_urdf && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/final_depth_test.dir/src/main_depth.cpp.o -c /home/cona/catkin_ws/src/basic_urdf/src/main_depth.cpp
 
-basic_urdf/CMakeFiles/final_depth_test.dir/src/final_depth_copy.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/final_depth_test.dir/src/final_depth_copy.cpp.i"
-	cd /home/cona/catkin_ws/build/basic_urdf && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cona/catkin_ws/src/basic_urdf/src/final_depth_copy.cpp > CMakeFiles/final_depth_test.dir/src/final_depth_copy.cpp.i
+basic_urdf/CMakeFiles/final_depth_test.dir/src/main_depth.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/final_depth_test.dir/src/main_depth.cpp.i"
+	cd /home/cona/catkin_ws/build/basic_urdf && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cona/catkin_ws/src/basic_urdf/src/main_depth.cpp > CMakeFiles/final_depth_test.dir/src/main_depth.cpp.i
 
-basic_urdf/CMakeFiles/final_depth_test.dir/src/final_depth_copy.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/final_depth_test.dir/src/final_depth_copy.cpp.s"
-	cd /home/cona/catkin_ws/build/basic_urdf && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cona/catkin_ws/src/basic_urdf/src/final_depth_copy.cpp -o CMakeFiles/final_depth_test.dir/src/final_depth_copy.cpp.s
+basic_urdf/CMakeFiles/final_depth_test.dir/src/main_depth.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/final_depth_test.dir/src/main_depth.cpp.s"
+	cd /home/cona/catkin_ws/build/basic_urdf && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cona/catkin_ws/src/basic_urdf/src/main_depth.cpp -o CMakeFiles/final_depth_test.dir/src/main_depth.cpp.s
+
+basic_urdf/CMakeFiles/final_depth_test.dir/src/final_depth_test.cpp.o: basic_urdf/CMakeFiles/final_depth_test.dir/flags.make
+basic_urdf/CMakeFiles/final_depth_test.dir/src/final_depth_test.cpp.o: /home/cona/catkin_ws/src/basic_urdf/src/final_depth_test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cona/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object basic_urdf/CMakeFiles/final_depth_test.dir/src/final_depth_test.cpp.o"
+	cd /home/cona/catkin_ws/build/basic_urdf && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/final_depth_test.dir/src/final_depth_test.cpp.o -c /home/cona/catkin_ws/src/basic_urdf/src/final_depth_test.cpp
+
+basic_urdf/CMakeFiles/final_depth_test.dir/src/final_depth_test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/final_depth_test.dir/src/final_depth_test.cpp.i"
+	cd /home/cona/catkin_ws/build/basic_urdf && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cona/catkin_ws/src/basic_urdf/src/final_depth_test.cpp > CMakeFiles/final_depth_test.dir/src/final_depth_test.cpp.i
+
+basic_urdf/CMakeFiles/final_depth_test.dir/src/final_depth_test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/final_depth_test.dir/src/final_depth_test.cpp.s"
+	cd /home/cona/catkin_ws/build/basic_urdf && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cona/catkin_ws/src/basic_urdf/src/final_depth_test.cpp -o CMakeFiles/final_depth_test.dir/src/final_depth_test.cpp.s
 
 # Object files for target final_depth_test
 final_depth_test_OBJECTS = \
-"CMakeFiles/final_depth_test.dir/src/final_depth_copy.cpp.o"
+"CMakeFiles/final_depth_test.dir/src/main_depth.cpp.o" \
+"CMakeFiles/final_depth_test.dir/src/final_depth_test.cpp.o"
 
 # External object files for target final_depth_test
 final_depth_test_EXTERNAL_OBJECTS =
 
-/home/cona/catkin_ws/devel/lib/basic_urdf/final_depth_test: basic_urdf/CMakeFiles/final_depth_test.dir/src/final_depth_copy.cpp.o
+/home/cona/catkin_ws/devel/lib/basic_urdf/final_depth_test: basic_urdf/CMakeFiles/final_depth_test.dir/src/main_depth.cpp.o
+/home/cona/catkin_ws/devel/lib/basic_urdf/final_depth_test: basic_urdf/CMakeFiles/final_depth_test.dir/src/final_depth_test.cpp.o
 /home/cona/catkin_ws/devel/lib/basic_urdf/final_depth_test: basic_urdf/CMakeFiles/final_depth_test.dir/build.make
 /home/cona/catkin_ws/devel/lib/basic_urdf/final_depth_test: /opt/ros/noetic/lib/libtf.so
 /home/cona/catkin_ws/devel/lib/basic_urdf/final_depth_test: /opt/ros/noetic/lib/libtf2_ros.so
@@ -150,7 +165,7 @@ final_depth_test_EXTERNAL_OBJECTS =
 /home/cona/catkin_ws/devel/lib/basic_urdf/final_depth_test: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.4.2.0
 /home/cona/catkin_ws/devel/lib/basic_urdf/final_depth_test: /usr/lib/x86_64-linux-gnu/libopencv_core.so.4.2.0
 /home/cona/catkin_ws/devel/lib/basic_urdf/final_depth_test: basic_urdf/CMakeFiles/final_depth_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/cona/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/cona/catkin_ws/devel/lib/basic_urdf/final_depth_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/cona/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable /home/cona/catkin_ws/devel/lib/basic_urdf/final_depth_test"
 	cd /home/cona/catkin_ws/build/basic_urdf && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/final_depth_test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

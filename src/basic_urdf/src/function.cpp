@@ -1,10 +1,15 @@
 #include "/home/cona/catkin_ws/src/basic_urdf/include/basic_urdf/test.hpp"
 
-MakePoint::MakePoint(): a(false)
+MakePoint::MakePoint()
 {
+   
     scan_sub = nh.subscribe("/scan1", 1, &MakePoint::counterCallback, this); 
     cloud_pub = nh.advertise<sensor_msgs::PointCloud>("/revised_scan1",1); // 스캐닝 레이져의 pointcloud
-    make_point();
+    if(!is_success)
+    {
+      make_point();
+    }
+ 
 }
 
 MakePoint::~MakePoint()
@@ -16,29 +21,28 @@ bool MakePoint::make_point()
   // bool a = false;
 
   //printf("111\n");
-  if(a == 0)
+  try
   {
-      printf("222\n");
+
+      ROS_INFO("222\n");
       listener.waitForTransform("base_link", "front_laser", ros::Time(0), ros::Duration(3.0));
       listener.lookupTransform("base_link","front_laser", ros::Time(0), transform); // --> ros::Time(0),
-     Rotation = tf::Matrix3x3(transform.getRotation()); // 회전 정보를 쿼터니언으로 반환
+      Rotation = tf::Matrix3x3(transform.getRotation()); // 회전 정보를 쿼터니언으로 반환
       Translation = tf::Vector3(transform.getOrigin().x(),transform.getOrigin().y(),transform.getOrigin().z()); // base_link 프레임을 기준
-      
-      a = true;
-    }
-  else
-    {
-      printf("333\n");
-        // ROS_WARN("%s",ex.what());
-        a = false;
-        // return; // 오류시 콜백 종료
-    }
-    printf("444\n");
-    return a;
+      is_success = true;
+
+  }
+  catch(tf::TransformException ex)
+  {
+    ROS_WARN("Error\n");
+    
+  }
+    return is_success;
 }
 
 void MakePoint::counterCallback(const sensor_msgs::LaserScan::ConstPtr& msg)
 {
+
   //printf("555\n");
   float x,y,z;
   float r,theta;
@@ -77,5 +81,5 @@ void MakePoint::counterCallback(const sensor_msgs::LaserScan::ConstPtr& msg)
     }
     
     cloud_pub.publish(cloud);
-    printf("777\n");
+    ROS_INFO("777\n");
 }

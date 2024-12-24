@@ -120,20 +120,13 @@ catkin_package(
 ## Your package locations should be listed before other locations
 include_directories(
   ${catkin_INCLUDE_DIRS}
+  include
 )
 
 
 #add_library(${PROJECT_NAME}
 # src/${PROJECT_NAME}/basic_urdf.cpp
 #)
-
-add_executable(${PROJECT_NAME}_node src/test_node.cpp)
-
-add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-
-target_link_libraries(${PROJECT_NAME}_node
-  ${catkin_LIBRARIES}
-)
 
 add_executable(my_front_laser src/basic_tf.cpp)
 
@@ -169,7 +162,11 @@ add_executable(final_depth src/final_depth.cpp)
     ${catkin_LIBRARIES}
 )
 
-add_executable(final_depth_test src/final_depth_copy.cpp)
+add_executable(final_depth_test 
+  src/main_depth.cpp 
+  src/final_depth_test.cpp
+  )
+
  
  add_dependencies(final_depth_test ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
  

@@ -10,18 +10,18 @@
   <joint name="joint1" type="fixed">
     <parent link="base_link" />
     <child link="front_laser" />
-    <origin rpy="0 0 0.785398163" xyz="0.0925 0.0575 0" />
+    <origin rpy="0 0 0.785398163" xyz="0.0945 0.0585 0" />
   </joint>
 
   <joint name="joint2" type="fixed">
     <parent link="base_link" />
     <child link="rear_laser" />
-    <origin rpy="0 0 3.926990817" xyz="-0.0925 -0.0575 0.0" />
+    <origin rpy="0 0 3.926990817" xyz="-0.0895 -0.0635 0.0" />
   </joint>
   
    <joint name="joint3" type="fixed">
       <parent link="base_link" />
       <child link="camera_link" />
-      <origin rpy="0 0 0" xyz="0.1275 0.0 0.0" />
+      <origin rpy="0 0 0" xyz="0.143 0.0 0.0" />
    </joint>
 </robot>

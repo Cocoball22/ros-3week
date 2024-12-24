@@ -1611,19 +1611,6 @@ tf_generate_messages_py/fast:
 .PHONY : tf_generate_messages_py/fast
 
 #=============================================================================
-# Target rules for targets named basic_urdf_node
-
-# Build rule for target.
-basic_urdf_node: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 basic_urdf_node
-.PHONY : basic_urdf_node
-
-# fast build rule for target.
-basic_urdf_node/fast:
-	$(MAKE) -f basic_urdf/CMakeFiles/basic_urdf_node.dir/build.make basic_urdf/CMakeFiles/basic_urdf_node.dir/build
-.PHONY : basic_urdf_node/fast
-
-#=============================================================================
 # Target rules for targets named my_front_laser
 
 # Build rule for target.
@@ -1929,7 +1916,6 @@ help:
 	@echo "... final_depth"
 	@echo "... tf_generate_messages_eus"
 	@echo "... tf_generate_messages_py"
-	@echo "... basic_urdf_node"
 	@echo "... my_front_laser"
 	@echo "... combi_test"
 	@echo "... tf_generate_messages_lisp"

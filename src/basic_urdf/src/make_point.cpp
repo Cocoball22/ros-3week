@@ -11,7 +11,7 @@ private:
     ros::NodeHandle nh;
     ros::Subscriber scan_sub;
     ros::Publisher cloud_pub;
-    tf::StampedTransform transform; // tf::
+    tf::StampedTransform transform; 
     tf::TransformListener listener;
     tf::Matrix3x3 Rotation; 
     tf::Vector3 Translation;

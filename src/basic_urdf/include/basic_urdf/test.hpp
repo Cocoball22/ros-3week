@@ -20,7 +20,8 @@ private:
     tf::Vector3 Translation;
     bool make_point();
     void counterCallback(const sensor_msgs::LaserScan::ConstPtr& msg);
-    bool a = false;
+    //bool a = false;
+    bool is_success = false;
     
 public:
     MakePoint();
