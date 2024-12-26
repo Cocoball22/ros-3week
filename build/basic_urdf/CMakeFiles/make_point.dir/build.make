@@ -57,42 +57,42 @@ include basic_urdf/CMakeFiles/make_point.dir/progress.make
 # Include the compile flags for this target's objects.
 include basic_urdf/CMakeFiles/make_point.dir/flags.make
 
-basic_urdf/CMakeFiles/make_point.dir/src/main.cpp.o: basic_urdf/CMakeFiles/make_point.dir/flags.make
-basic_urdf/CMakeFiles/make_point.dir/src/main.cpp.o: /home/cona/catkin_ws/src/basic_urdf/src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cona/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object basic_urdf/CMakeFiles/make_point.dir/src/main.cpp.o"
-	cd /home/cona/catkin_ws/build/basic_urdf && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/make_point.dir/src/main.cpp.o -c /home/cona/catkin_ws/src/basic_urdf/src/main.cpp
+basic_urdf/CMakeFiles/make_point.dir/src/main_depth.cpp.o: basic_urdf/CMakeFiles/make_point.dir/flags.make
+basic_urdf/CMakeFiles/make_point.dir/src/main_depth.cpp.o: /home/cona/catkin_ws/src/basic_urdf/src/main_depth.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cona/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object basic_urdf/CMakeFiles/make_point.dir/src/main_depth.cpp.o"
+	cd /home/cona/catkin_ws/build/basic_urdf && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/make_point.dir/src/main_depth.cpp.o -c /home/cona/catkin_ws/src/basic_urdf/src/main_depth.cpp
 
-basic_urdf/CMakeFiles/make_point.dir/src/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/make_point.dir/src/main.cpp.i"
-	cd /home/cona/catkin_ws/build/basic_urdf && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cona/catkin_ws/src/basic_urdf/src/main.cpp > CMakeFiles/make_point.dir/src/main.cpp.i
+basic_urdf/CMakeFiles/make_point.dir/src/main_depth.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/make_point.dir/src/main_depth.cpp.i"
+	cd /home/cona/catkin_ws/build/basic_urdf && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cona/catkin_ws/src/basic_urdf/src/main_depth.cpp > CMakeFiles/make_point.dir/src/main_depth.cpp.i
 
-basic_urdf/CMakeFiles/make_point.dir/src/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/make_point.dir/src/main.cpp.s"
-	cd /home/cona/catkin_ws/build/basic_urdf && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cona/catkin_ws/src/basic_urdf/src/main.cpp -o CMakeFiles/make_point.dir/src/main.cpp.s
+basic_urdf/CMakeFiles/make_point.dir/src/main_depth.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/make_point.dir/src/main_depth.cpp.s"
+	cd /home/cona/catkin_ws/build/basic_urdf && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cona/catkin_ws/src/basic_urdf/src/main_depth.cpp -o CMakeFiles/make_point.dir/src/main_depth.cpp.s
 
-basic_urdf/CMakeFiles/make_point.dir/src/function.cpp.o: basic_urdf/CMakeFiles/make_point.dir/flags.make
-basic_urdf/CMakeFiles/make_point.dir/src/function.cpp.o: /home/cona/catkin_ws/src/basic_urdf/src/function.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cona/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object basic_urdf/CMakeFiles/make_point.dir/src/function.cpp.o"
-	cd /home/cona/catkin_ws/build/basic_urdf && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/make_point.dir/src/function.cpp.o -c /home/cona/catkin_ws/src/basic_urdf/src/function.cpp
+basic_urdf/CMakeFiles/make_point.dir/src/final_depth_test.cpp.o: basic_urdf/CMakeFiles/make_point.dir/flags.make
+basic_urdf/CMakeFiles/make_point.dir/src/final_depth_test.cpp.o: /home/cona/catkin_ws/src/basic_urdf/src/final_depth_test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cona/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object basic_urdf/CMakeFiles/make_point.dir/src/final_depth_test.cpp.o"
+	cd /home/cona/catkin_ws/build/basic_urdf && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/make_point.dir/src/final_depth_test.cpp.o -c /home/cona/catkin_ws/src/basic_urdf/src/final_depth_test.cpp
 
-basic_urdf/CMakeFiles/make_point.dir/src/function.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/make_point.dir/src/function.cpp.i"
-	cd /home/cona/catkin_ws/build/basic_urdf && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cona/catkin_ws/src/basic_urdf/src/function.cpp > CMakeFiles/make_point.dir/src/function.cpp.i
+basic_urdf/CMakeFiles/make_point.dir/src/final_depth_test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/make_point.dir/src/final_depth_test.cpp.i"
+	cd /home/cona/catkin_ws/build/basic_urdf && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cona/catkin_ws/src/basic_urdf/src/final_depth_test.cpp > CMakeFiles/make_point.dir/src/final_depth_test.cpp.i
 
-basic_urdf/CMakeFiles/make_point.dir/src/function.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/make_point.dir/src/function.cpp.s"
-	cd /home/cona/catkin_ws/build/basic_urdf && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cona/catkin_ws/src/basic_urdf/src/function.cpp -o CMakeFiles/make_point.dir/src/function.cpp.s
+basic_urdf/CMakeFiles/make_point.dir/src/final_depth_test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/make_point.dir/src/final_depth_test.cpp.s"
+	cd /home/cona/catkin_ws/build/basic_urdf && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cona/catkin_ws/src/basic_urdf/src/final_depth_test.cpp -o CMakeFiles/make_point.dir/src/final_depth_test.cpp.s
 
 # Object files for target make_point
 make_point_OBJECTS = \
-"CMakeFiles/make_point.dir/src/main.cpp.o" \
-"CMakeFiles/make_point.dir/src/function.cpp.o"
+"CMakeFiles/make_point.dir/src/main_depth.cpp.o" \
+"CMakeFiles/make_point.dir/src/final_depth_test.cpp.o"
 
 # External object files for target make_point
 make_point_EXTERNAL_OBJECTS =
 
-/home/cona/catkin_ws/devel/lib/basic_urdf/make_point: basic_urdf/CMakeFiles/make_point.dir/src/main.cpp.o
-/home/cona/catkin_ws/devel/lib/basic_urdf/make_point: basic_urdf/CMakeFiles/make_point.dir/src/function.cpp.o
+/home/cona/catkin_ws/devel/lib/basic_urdf/make_point: basic_urdf/CMakeFiles/make_point.dir/src/main_depth.cpp.o
+/home/cona/catkin_ws/devel/lib/basic_urdf/make_point: basic_urdf/CMakeFiles/make_point.dir/src/final_depth_test.cpp.o
 /home/cona/catkin_ws/devel/lib/basic_urdf/make_point: basic_urdf/CMakeFiles/make_point.dir/build.make
 /home/cona/catkin_ws/devel/lib/basic_urdf/make_point: /opt/ros/noetic/lib/libtf.so
 /home/cona/catkin_ws/devel/lib/basic_urdf/make_point: /opt/ros/noetic/lib/libtf2_ros.so

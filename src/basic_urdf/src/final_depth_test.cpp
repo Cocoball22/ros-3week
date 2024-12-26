@@ -2,15 +2,14 @@
 
 final_depth_test::final_depth_test()
 {
-    depth_sub = nh.subscribe("/camera/depth/points",1, &final_depth_test::camera_callback, this);
-    ROS_INFO("Pointcloudsubscriber initialized");
-    depth_pub = nh.advertise<sensor_msgs::PointCloud>("/depth_tf",1);
-    depth_pub_2 = nh.advertise<sensor_msgs::PointCloud>("/depth_non_tf",1);
-    ROS_INFO("Pointcloudpublisher initialized");
-    if(!is_success)
+    if(!is_success && ros::ok())
     {
         final_depth();
     }
+    depth_sub = nh.subscribe("/camera/depth/points",1, &final_depth_test::camera_callback, this); 
+    depth_pub = nh.advertise<sensor_msgs::PointCloud>("/depth_tf",1);
+    depth_pub_2 = nh.advertise<sensor_msgs::PointCloud>("/depth_non_tf",1);
+    
 }
 
 final_depth_test::~final_depth_test()
@@ -22,8 +21,8 @@ bool final_depth_test::final_depth()
 {
   try
   {
-      listener.waitForTransform("base_link", "camera_depth_optical_frame", ros::Time(0), ros::Duration(3.0));
-      listener.lookupTransform("base_link","camera_depth_optical_frame", ros::Time(0), tf_depth); // --> ros::Time(0),
+      listener.waitForTransform("base_link", "camera_depth_optical_frame", ros::Time(0), ros::Duration(3.0)); // 좌표 변화하는 시간이 걸려서 3초 대기
+      listener.lookupTransform("base_link","camera_depth_optical_frame", ros::Time(0), tf_depth); // 좌표변화
       rotation_depth = tf::Matrix3x3(tf_depth.getRotation()); // 회전 정보를 쿼터니언으로 반환
       translation_depth = tf::Vector3(tf_depth.getOrigin().x(),tf_depth.getOrigin().y(),tf_depth.getOrigin().z()); // base_link 프레임을 기준
       is_success = true;
@@ -40,20 +39,20 @@ bool final_depth_test::final_depth()
 void final_depth_test::camera_callback(const sensor_msgs::PointCloud2::ConstPtr& msg)
 {   
     
-    sensor_msgs::PointCloud cloud_tf;
-    geometry_msgs::Point32 v_tf;
+    sensor_msgs::PointCloud cloud_tf; 
+    geometry_msgs::Point32 v_tf; // 포인트 클라우드에 출력할 데이터 자료형을 맞추려고 씀
     cloud_tf.header.stamp = ros::Time::now();
     cloud_tf.header.frame_id = "base_link";
 
-     sensor_msgs::PointCloud cloud_non_tf;
+    sensor_msgs::PointCloud cloud_non_tf;
     geometry_msgs::Point32 v_non_tf;
     cloud_non_tf.header.stamp = ros::Time::now();
     cloud_non_tf.header.frame_id = "base_link";
 
-
-    std::cout << "Received PointCloud2 " << std::endl;
-
-    sensor_msgs::PointCloud2ConstIterator<float> iter_x(*msg, "x");
+    // 특정 필드에 접근하여 반복(iteration)하며 값을 읽고, ConstIterator는 읽기 전용으로, 데이터를 수정하지 못합니다.
+    // 메시지를 가리키는 포인터를 역참조하여 실제 데이터 메시지를 전달
+    // 각 필드의 값이 float타입으로 저장
+    sensor_msgs::PointCloud2ConstIterator<float> iter_x(*msg, "x"); // Pointcloud2 메시지에서  특정 필드(x,y,z)를 효율적을 순회
     sensor_msgs::PointCloud2ConstIterator<float> iter_y(*msg, "y");
     sensor_msgs::PointCloud2ConstIterator<float> iter_z(*msg, "z");
     
@@ -70,7 +69,7 @@ void final_depth_test::camera_callback(const sensor_msgs::PointCloud2::ConstPtr&
         v_tf.y = transformed_tf.y();
         v_tf.z = transformed_tf.z();
 
-         v_non_tf.x = v1.x();
+        v_non_tf.x = v1.x();
         v_non_tf.y = v1.y();
         v_non_tf.z = v1.z();
 

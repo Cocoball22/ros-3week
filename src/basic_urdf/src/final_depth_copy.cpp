@@ -25,7 +25,7 @@ public:
       try
       {
         listener.waitForTransform("base_link", "camera_depth_optical_frame", ros::Time(0), ros::Duration(3.0));
-        listener.lookupTransform("base_link","camera_depth_optical_frame", ros::Time(0), tf_depth); // 
+        listener.lookupTransform("base_link","camera_depth_optical_frame", ros::Time(0), tf_depth); // 카메라에서 보내주는 데이터
 
         rotation_depth = tf::Matrix3x3(tf_depth.getRotation()); // 회전 정보를 쿼터니언으로 반환
         translation_depth = tf::Vector3(tf_depth.getOrigin().x(),tf_depth.getOrigin().y(),tf_depth.getOrigin().z()); // base_link 프레임을 기준

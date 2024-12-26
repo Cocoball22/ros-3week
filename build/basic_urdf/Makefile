@@ -80,6 +80,28 @@ install/local/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -101,28 +123,6 @@ list_install_components:
 list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -168,64 +168,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-basic_urdf/CMakeFiles/tf_generate_messages_cpp.dir/rule:
-	cd /home/cona/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 basic_urdf/CMakeFiles/tf_generate_messages_cpp.dir/rule
-.PHONY : basic_urdf/CMakeFiles/tf_generate_messages_cpp.dir/rule
+basic_urdf/CMakeFiles/scan_depth.dir/rule:
+	cd /home/cona/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 basic_urdf/CMakeFiles/scan_depth.dir/rule
+.PHONY : basic_urdf/CMakeFiles/scan_depth.dir/rule
 
 # Convenience name for target.
-tf_generate_messages_cpp: basic_urdf/CMakeFiles/tf_generate_messages_cpp.dir/rule
+scan_depth: basic_urdf/CMakeFiles/scan_depth.dir/rule
 
-.PHONY : tf_generate_messages_cpp
+.PHONY : scan_depth
 
 # fast build rule for target.
-tf_generate_messages_cpp/fast:
-	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/tf_generate_messages_cpp.dir/build.make basic_urdf/CMakeFiles/tf_generate_messages_cpp.dir/build
-.PHONY : tf_generate_messages_cpp/fast
-
-# Convenience name for target.
-basic_urdf/CMakeFiles/tf_generate_messages_nodejs.dir/rule:
-	cd /home/cona/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 basic_urdf/CMakeFiles/tf_generate_messages_nodejs.dir/rule
-.PHONY : basic_urdf/CMakeFiles/tf_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-tf_generate_messages_nodejs: basic_urdf/CMakeFiles/tf_generate_messages_nodejs.dir/rule
-
-.PHONY : tf_generate_messages_nodejs
-
-# fast build rule for target.
-tf_generate_messages_nodejs/fast:
-	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/tf_generate_messages_nodejs.dir/build.make basic_urdf/CMakeFiles/tf_generate_messages_nodejs.dir/build
-.PHONY : tf_generate_messages_nodejs/fast
-
-# Convenience name for target.
-basic_urdf/CMakeFiles/final_depth.dir/rule:
-	cd /home/cona/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 basic_urdf/CMakeFiles/final_depth.dir/rule
-.PHONY : basic_urdf/CMakeFiles/final_depth.dir/rule
-
-# Convenience name for target.
-final_depth: basic_urdf/CMakeFiles/final_depth.dir/rule
-
-.PHONY : final_depth
-
-# fast build rule for target.
-final_depth/fast:
-	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/final_depth.dir/build.make basic_urdf/CMakeFiles/final_depth.dir/build
-.PHONY : final_depth/fast
-
-# Convenience name for target.
-basic_urdf/CMakeFiles/tf_generate_messages_eus.dir/rule:
-	cd /home/cona/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 basic_urdf/CMakeFiles/tf_generate_messages_eus.dir/rule
-.PHONY : basic_urdf/CMakeFiles/tf_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-tf_generate_messages_eus: basic_urdf/CMakeFiles/tf_generate_messages_eus.dir/rule
-
-.PHONY : tf_generate_messages_eus
-
-# fast build rule for target.
-tf_generate_messages_eus/fast:
-	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/tf_generate_messages_eus.dir/build.make basic_urdf/CMakeFiles/tf_generate_messages_eus.dir/build
-.PHONY : tf_generate_messages_eus/fast
+scan_depth/fast:
+	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/scan_depth.dir/build.make basic_urdf/CMakeFiles/scan_depth.dir/build
+.PHONY : scan_depth/fast
 
 # Convenience name for target.
 basic_urdf/CMakeFiles/tf_generate_messages_py.dir/rule:
@@ -243,34 +198,19 @@ tf_generate_messages_py/fast:
 .PHONY : tf_generate_messages_py/fast
 
 # Convenience name for target.
-basic_urdf/CMakeFiles/my_front_laser.dir/rule:
-	cd /home/cona/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 basic_urdf/CMakeFiles/my_front_laser.dir/rule
-.PHONY : basic_urdf/CMakeFiles/my_front_laser.dir/rule
+basic_urdf/CMakeFiles/tf_generate_messages_nodejs.dir/rule:
+	cd /home/cona/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 basic_urdf/CMakeFiles/tf_generate_messages_nodejs.dir/rule
+.PHONY : basic_urdf/CMakeFiles/tf_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-my_front_laser: basic_urdf/CMakeFiles/my_front_laser.dir/rule
+tf_generate_messages_nodejs: basic_urdf/CMakeFiles/tf_generate_messages_nodejs.dir/rule
 
-.PHONY : my_front_laser
+.PHONY : tf_generate_messages_nodejs
 
 # fast build rule for target.
-my_front_laser/fast:
-	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/my_front_laser.dir/build.make basic_urdf/CMakeFiles/my_front_laser.dir/build
-.PHONY : my_front_laser/fast
-
-# Convenience name for target.
-basic_urdf/CMakeFiles/combi_test.dir/rule:
-	cd /home/cona/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 basic_urdf/CMakeFiles/combi_test.dir/rule
-.PHONY : basic_urdf/CMakeFiles/combi_test.dir/rule
-
-# Convenience name for target.
-combi_test: basic_urdf/CMakeFiles/combi_test.dir/rule
-
-.PHONY : combi_test
-
-# fast build rule for target.
-combi_test/fast:
-	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/combi_test.dir/build.make basic_urdf/CMakeFiles/combi_test.dir/build
-.PHONY : combi_test/fast
+tf_generate_messages_nodejs/fast:
+	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/tf_generate_messages_nodejs.dir/build.make basic_urdf/CMakeFiles/tf_generate_messages_nodejs.dir/build
+.PHONY : tf_generate_messages_nodejs/fast
 
 # Convenience name for target.
 basic_urdf/CMakeFiles/tf_generate_messages_lisp.dir/rule:
@@ -288,223 +228,88 @@ tf_generate_messages_lisp/fast:
 .PHONY : tf_generate_messages_lisp/fast
 
 # Convenience name for target.
-basic_urdf/CMakeFiles/make_point.dir/rule:
-	cd /home/cona/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 basic_urdf/CMakeFiles/make_point.dir/rule
-.PHONY : basic_urdf/CMakeFiles/make_point.dir/rule
+basic_urdf/CMakeFiles/tf_generate_messages_eus.dir/rule:
+	cd /home/cona/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 basic_urdf/CMakeFiles/tf_generate_messages_eus.dir/rule
+.PHONY : basic_urdf/CMakeFiles/tf_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-make_point: basic_urdf/CMakeFiles/make_point.dir/rule
+tf_generate_messages_eus: basic_urdf/CMakeFiles/tf_generate_messages_eus.dir/rule
 
-.PHONY : make_point
+.PHONY : tf_generate_messages_eus
 
 # fast build rule for target.
-make_point/fast:
-	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/make_point.dir/build.make basic_urdf/CMakeFiles/make_point.dir/build
-.PHONY : make_point/fast
+tf_generate_messages_eus/fast:
+	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/tf_generate_messages_eus.dir/build.make basic_urdf/CMakeFiles/tf_generate_messages_eus.dir/build
+.PHONY : tf_generate_messages_eus/fast
 
 # Convenience name for target.
-basic_urdf/CMakeFiles/final_depth_test.dir/rule:
-	cd /home/cona/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 basic_urdf/CMakeFiles/final_depth_test.dir/rule
-.PHONY : basic_urdf/CMakeFiles/final_depth_test.dir/rule
+basic_urdf/CMakeFiles/tf_generate_messages_cpp.dir/rule:
+	cd /home/cona/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 basic_urdf/CMakeFiles/tf_generate_messages_cpp.dir/rule
+.PHONY : basic_urdf/CMakeFiles/tf_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-final_depth_test: basic_urdf/CMakeFiles/final_depth_test.dir/rule
+tf_generate_messages_cpp: basic_urdf/CMakeFiles/tf_generate_messages_cpp.dir/rule
 
-.PHONY : final_depth_test
+.PHONY : tf_generate_messages_cpp
 
 # fast build rule for target.
-final_depth_test/fast:
-	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/final_depth_test.dir/build.make basic_urdf/CMakeFiles/final_depth_test.dir/build
-.PHONY : final_depth_test/fast
+tf_generate_messages_cpp/fast:
+	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/tf_generate_messages_cpp.dir/build.make basic_urdf/CMakeFiles/tf_generate_messages_cpp.dir/build
+.PHONY : tf_generate_messages_cpp/fast
 
-src/basic_tf.o: src/basic_tf.cpp.o
+src/main_scan_depth.o: src/main_scan_depth.cpp.o
 
-.PHONY : src/basic_tf.o
-
-# target to build an object file
-src/basic_tf.cpp.o:
-	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/my_front_laser.dir/build.make basic_urdf/CMakeFiles/my_front_laser.dir/src/basic_tf.cpp.o
-.PHONY : src/basic_tf.cpp.o
-
-src/basic_tf.i: src/basic_tf.cpp.i
-
-.PHONY : src/basic_tf.i
-
-# target to preprocess a source file
-src/basic_tf.cpp.i:
-	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/my_front_laser.dir/build.make basic_urdf/CMakeFiles/my_front_laser.dir/src/basic_tf.cpp.i
-.PHONY : src/basic_tf.cpp.i
-
-src/basic_tf.s: src/basic_tf.cpp.s
-
-.PHONY : src/basic_tf.s
-
-# target to generate assembly for a file
-src/basic_tf.cpp.s:
-	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/my_front_laser.dir/build.make basic_urdf/CMakeFiles/my_front_laser.dir/src/basic_tf.cpp.s
-.PHONY : src/basic_tf.cpp.s
-
-src/combi_test.o: src/combi_test.cpp.o
-
-.PHONY : src/combi_test.o
+.PHONY : src/main_scan_depth.o
 
 # target to build an object file
-src/combi_test.cpp.o:
-	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/combi_test.dir/build.make basic_urdf/CMakeFiles/combi_test.dir/src/combi_test.cpp.o
-.PHONY : src/combi_test.cpp.o
+src/main_scan_depth.cpp.o:
+	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/scan_depth.dir/build.make basic_urdf/CMakeFiles/scan_depth.dir/src/main_scan_depth.cpp.o
+.PHONY : src/main_scan_depth.cpp.o
 
-src/combi_test.i: src/combi_test.cpp.i
+src/main_scan_depth.i: src/main_scan_depth.cpp.i
 
-.PHONY : src/combi_test.i
+.PHONY : src/main_scan_depth.i
 
 # target to preprocess a source file
-src/combi_test.cpp.i:
-	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/combi_test.dir/build.make basic_urdf/CMakeFiles/combi_test.dir/src/combi_test.cpp.i
-.PHONY : src/combi_test.cpp.i
+src/main_scan_depth.cpp.i:
+	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/scan_depth.dir/build.make basic_urdf/CMakeFiles/scan_depth.dir/src/main_scan_depth.cpp.i
+.PHONY : src/main_scan_depth.cpp.i
 
-src/combi_test.s: src/combi_test.cpp.s
+src/main_scan_depth.s: src/main_scan_depth.cpp.s
 
-.PHONY : src/combi_test.s
+.PHONY : src/main_scan_depth.s
 
 # target to generate assembly for a file
-src/combi_test.cpp.s:
-	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/combi_test.dir/build.make basic_urdf/CMakeFiles/combi_test.dir/src/combi_test.cpp.s
-.PHONY : src/combi_test.cpp.s
+src/main_scan_depth.cpp.s:
+	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/scan_depth.dir/build.make basic_urdf/CMakeFiles/scan_depth.dir/src/main_scan_depth.cpp.s
+.PHONY : src/main_scan_depth.cpp.s
 
-src/final_depth.o: src/final_depth.cpp.o
+src/scan_depth.o: src/scan_depth.cpp.o
 
-.PHONY : src/final_depth.o
+.PHONY : src/scan_depth.o
 
 # target to build an object file
-src/final_depth.cpp.o:
-	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/final_depth.dir/build.make basic_urdf/CMakeFiles/final_depth.dir/src/final_depth.cpp.o
-.PHONY : src/final_depth.cpp.o
+src/scan_depth.cpp.o:
+	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/scan_depth.dir/build.make basic_urdf/CMakeFiles/scan_depth.dir/src/scan_depth.cpp.o
+.PHONY : src/scan_depth.cpp.o
 
-src/final_depth.i: src/final_depth.cpp.i
+src/scan_depth.i: src/scan_depth.cpp.i
 
-.PHONY : src/final_depth.i
-
-# target to preprocess a source file
-src/final_depth.cpp.i:
-	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/final_depth.dir/build.make basic_urdf/CMakeFiles/final_depth.dir/src/final_depth.cpp.i
-.PHONY : src/final_depth.cpp.i
-
-src/final_depth.s: src/final_depth.cpp.s
-
-.PHONY : src/final_depth.s
-
-# target to generate assembly for a file
-src/final_depth.cpp.s:
-	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/final_depth.dir/build.make basic_urdf/CMakeFiles/final_depth.dir/src/final_depth.cpp.s
-.PHONY : src/final_depth.cpp.s
-
-src/final_depth_test.o: src/final_depth_test.cpp.o
-
-.PHONY : src/final_depth_test.o
-
-# target to build an object file
-src/final_depth_test.cpp.o:
-	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/final_depth_test.dir/build.make basic_urdf/CMakeFiles/final_depth_test.dir/src/final_depth_test.cpp.o
-.PHONY : src/final_depth_test.cpp.o
-
-src/final_depth_test.i: src/final_depth_test.cpp.i
-
-.PHONY : src/final_depth_test.i
+.PHONY : src/scan_depth.i
 
 # target to preprocess a source file
-src/final_depth_test.cpp.i:
-	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/final_depth_test.dir/build.make basic_urdf/CMakeFiles/final_depth_test.dir/src/final_depth_test.cpp.i
-.PHONY : src/final_depth_test.cpp.i
+src/scan_depth.cpp.i:
+	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/scan_depth.dir/build.make basic_urdf/CMakeFiles/scan_depth.dir/src/scan_depth.cpp.i
+.PHONY : src/scan_depth.cpp.i
 
-src/final_depth_test.s: src/final_depth_test.cpp.s
+src/scan_depth.s: src/scan_depth.cpp.s
 
-.PHONY : src/final_depth_test.s
-
-# target to generate assembly for a file
-src/final_depth_test.cpp.s:
-	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/final_depth_test.dir/build.make basic_urdf/CMakeFiles/final_depth_test.dir/src/final_depth_test.cpp.s
-.PHONY : src/final_depth_test.cpp.s
-
-src/function.o: src/function.cpp.o
-
-.PHONY : src/function.o
-
-# target to build an object file
-src/function.cpp.o:
-	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/make_point.dir/build.make basic_urdf/CMakeFiles/make_point.dir/src/function.cpp.o
-.PHONY : src/function.cpp.o
-
-src/function.i: src/function.cpp.i
-
-.PHONY : src/function.i
-
-# target to preprocess a source file
-src/function.cpp.i:
-	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/make_point.dir/build.make basic_urdf/CMakeFiles/make_point.dir/src/function.cpp.i
-.PHONY : src/function.cpp.i
-
-src/function.s: src/function.cpp.s
-
-.PHONY : src/function.s
+.PHONY : src/scan_depth.s
 
 # target to generate assembly for a file
-src/function.cpp.s:
-	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/make_point.dir/build.make basic_urdf/CMakeFiles/make_point.dir/src/function.cpp.s
-.PHONY : src/function.cpp.s
-
-src/main.o: src/main.cpp.o
-
-.PHONY : src/main.o
-
-# target to build an object file
-src/main.cpp.o:
-	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/make_point.dir/build.make basic_urdf/CMakeFiles/make_point.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
-
-src/main.i: src/main.cpp.i
-
-.PHONY : src/main.i
-
-# target to preprocess a source file
-src/main.cpp.i:
-	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/make_point.dir/build.make basic_urdf/CMakeFiles/make_point.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
-
-src/main.s: src/main.cpp.s
-
-.PHONY : src/main.s
-
-# target to generate assembly for a file
-src/main.cpp.s:
-	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/make_point.dir/build.make basic_urdf/CMakeFiles/make_point.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
-
-src/main_depth.o: src/main_depth.cpp.o
-
-.PHONY : src/main_depth.o
-
-# target to build an object file
-src/main_depth.cpp.o:
-	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/final_depth_test.dir/build.make basic_urdf/CMakeFiles/final_depth_test.dir/src/main_depth.cpp.o
-.PHONY : src/main_depth.cpp.o
-
-src/main_depth.i: src/main_depth.cpp.i
-
-.PHONY : src/main_depth.i
-
-# target to preprocess a source file
-src/main_depth.cpp.i:
-	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/final_depth_test.dir/build.make basic_urdf/CMakeFiles/final_depth_test.dir/src/main_depth.cpp.i
-.PHONY : src/main_depth.cpp.i
-
-src/main_depth.s: src/main_depth.cpp.s
-
-.PHONY : src/main_depth.s
-
-# target to generate assembly for a file
-src/main_depth.cpp.s:
-	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/final_depth_test.dir/build.make basic_urdf/CMakeFiles/final_depth_test.dir/src/main_depth.cpp.s
-.PHONY : src/main_depth.cpp.s
+src/scan_depth.cpp.s:
+	cd /home/cona/catkin_ws/build && $(MAKE) -f basic_urdf/CMakeFiles/scan_depth.dir/build.make basic_urdf/CMakeFiles/scan_depth.dir/src/scan_depth.cpp.s
+.PHONY : src/scan_depth.cpp.s
 
 # Help Target
 help:
@@ -514,42 +319,23 @@ help:
 	@echo "... depend"
 	@echo "... install/strip"
 	@echo "... install/local"
+	@echo "... edit_cache"
+	@echo "... test"
 	@echo "... install"
 	@echo "... list_install_components"
-	@echo "... tf_generate_messages_cpp"
-	@echo "... tf_generate_messages_nodejs"
-	@echo "... final_depth"
-	@echo "... tf_generate_messages_eus"
-	@echo "... tf_generate_messages_py"
-	@echo "... my_front_laser"
-	@echo "... test"
-	@echo "... combi_test"
-	@echo "... tf_generate_messages_lisp"
-	@echo "... make_point"
-	@echo "... final_depth_test"
-	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... src/basic_tf.o"
-	@echo "... src/basic_tf.i"
-	@echo "... src/basic_tf.s"
-	@echo "... src/combi_test.o"
-	@echo "... src/combi_test.i"
-	@echo "... src/combi_test.s"
-	@echo "... src/final_depth.o"
-	@echo "... src/final_depth.i"
-	@echo "... src/final_depth.s"
-	@echo "... src/final_depth_test.o"
-	@echo "... src/final_depth_test.i"
-	@echo "... src/final_depth_test.s"
-	@echo "... src/function.o"
-	@echo "... src/function.i"
-	@echo "... src/function.s"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
-	@echo "... src/main_depth.o"
-	@echo "... src/main_depth.i"
-	@echo "... src/main_depth.s"
+	@echo "... scan_depth"
+	@echo "... tf_generate_messages_py"
+	@echo "... tf_generate_messages_nodejs"
+	@echo "... tf_generate_messages_lisp"
+	@echo "... tf_generate_messages_eus"
+	@echo "... tf_generate_messages_cpp"
+	@echo "... src/main_scan_depth.o"
+	@echo "... src/main_scan_depth.i"
+	@echo "... src/main_scan_depth.s"
+	@echo "... src/scan_depth.o"
+	@echo "... src/scan_depth.i"
+	@echo "... src/scan_depth.s"
 .PHONY : help
 
 

@@ -43,20 +43,21 @@ public:
       float x,y,z;
       float r,theta;
       
-      tf::Vector3 laser_point, point_out; // 회전 적용
+      tf::Vector3 laser_point, point_out; // 레이저센서에서 측정된 좌표값
       sensor_msgs::PointCloud cloud;      // 카메라, 스캐닝 레이저 거리 측적기 등 일반적으로 사용되는 센서에 대한 메시지, 3차원 포인트 컬랙션
       geometry_msgs::Point32 point_out_; // 점, 벡터, 포즈와 같은 일반적인 가하학적 기본 요소에 대한 메시지
 
-      int ranges_size = msg->ranges.size(); // 
+      int ranges_size = msg->ranges.size(); // 메시지의 사이즈 정의 
      
       cloud.header.stamp = ros::Time::now(); // 센서 데이터 수집 시간
       cloud.header.frame_id = "base_link";   // 좌표 프레임 ID
 
-      cloud.points.resize(ranges_size);
+      cloud.points.resize(ranges_size); // 벡터를 매번 동적할당을 하지않고 사이즈를 고정해서 사용
+     
 
-        for(int i = 0; i < ranges_size; i++)
+        for(int i = 0; i < ranges_size; i++) // 
         {
-          r = msg->ranges[i]; // 현재 거리값
+          r = msg->ranges[i]; // 측정된 거리값
       
           if (!(r >= msg->range_min && r <= msg->range_max))
           {
@@ -64,12 +65,9 @@ public:
           }
 
           theta = msg->angle_min + (i * msg->angle_increment); // 현재 각도 계산
-          x = r * cos(theta);
+          x = r * cos(theta); 
           y = r * sin(theta);
           z = 0.0;
-          ROS_INFO("r: %f, theta: %f", r, theta);
-          ROS_INFO("x: %f, y: %f, z: %f", x, y, z);
-
          
           laser_point.setValue(x, y, z);  // 한 줄로 값을 할당
 
@@ -79,7 +77,6 @@ public:
           point_out_.y = point_out.y();
           point_out_.z = point_out.z();
 
-          ROS_INFO(" point_out_ = (%f, %f, %f \n\r)",point_out_.x, point_out_.y, point_out_.z);
           cloud.points[i] = point_out_;
         }
         

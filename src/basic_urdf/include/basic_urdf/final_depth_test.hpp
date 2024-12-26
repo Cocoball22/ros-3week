@@ -4,6 +4,7 @@
 #include <ros/ros.h>
 #include <tf/transform_listener.h>
 #include <sensor_msgs/PointCloud2.h>
+#include <sensor_msgs/LaserScan.h>
 #include <sensor_msgs/point_cloud2_iterator.h>
 #include "opencv2/opencv.hpp"
 #include <geometry_msgs/Point32.h>
@@ -29,6 +30,26 @@ class final_depth_test
         final_depth_test();
         ~final_depth_test();
     
+};
+
+class MakePoint
+{
+private:
+    ros::NodeHandle nh;
+    ros::Subscriber scan_sub;
+    ros::Publisher cloud_pub;
+    tf::StampedTransform transform; // tf::
+    tf::TransformListener listener;
+    tf::Matrix3x3 Rotation; 
+    tf::Vector3 Translation;
+    void make_point();
+    void counterCallback(const sensor_msgs::LaserScan::ConstPtr& msg);
+    //bool a = false;
+    bool is_success = false;
+    
+public:
+    MakePoint();
+        ~MakePoint();
 };
 
 #endif

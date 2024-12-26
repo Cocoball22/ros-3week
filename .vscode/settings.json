@@ -1,9 +1,10 @@
 {
-    "ros.distro": "noetic",
     "python.autoComplete.extraPaths": [
+        "/home/cona/catkin_ws/devel/lib/python3/dist-packages",
         "/opt/ros/noetic/lib/python3/dist-packages"
     ],
     "python.analysis.extraPaths": [
+        "/home/cona/catkin_ws/devel/lib/python3/dist-packages",
         "/opt/ros/noetic/lib/python3/dist-packages"
     ]
 }
