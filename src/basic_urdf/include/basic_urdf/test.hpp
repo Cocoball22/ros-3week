@@ -17,7 +17,7 @@ private:
     ros::NodeHandle nh;
     ros::Subscriber scan_sub;
     ros::Publisher cloud_pub;
-    tf::StampedTransform transform;
+    tf::StampedTransform transform; // 좌표계 변환 정보를 담는 객체 
     tf::TransformListener listener;
     tf::Matrix3x3 Rotation; 
     tf::Vector3 Translation;

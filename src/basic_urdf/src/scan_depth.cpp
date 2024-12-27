@@ -21,6 +21,7 @@ scan_depth::scan_depth()
 scan_depth::~scan_depth()
 {
     ROS_INFO("scan_depth test down.");
+
 }
 
 void scan_depth::listener_func()
@@ -29,17 +30,37 @@ void scan_depth::listener_func()
       {
         // scan tf
         // 변환 요청하는 기준 좌표계에서 변환 대상 좌표계
-        listener_scan.waitForTransform("base_link", "front_laser", ros::Time(0), ros::Duration(3.0)); // tf는 변환이 가능해질 때까지 기다리는 도구
-        listener_scan.lookupTransform("base_link","front_laser", ros::Time(0), transform_scan); // 변환을 요청한 시점에 변환 데이터를 transform_scan에 저장 
+        listener_scan.waitForTransform("base_link", "front_laser", ros::Time(0), ros::Duration(3.0)); // 특정 좌표계의 변환 정보가 유효해질 때까지 기다림
+        listener_scan.lookupTransform("base_link","front_laser", ros::Time(0), transform_scan); // 두 좌표계 간의 변환 정보를 3x3행렬로 변환
         // 여기서 클래스 tf::transform 클래스를 상속받아 시간과 좌표계 정보를 추가
         rotation_scan = tf::Matrix3x3(transform_scan.getRotation()); // 회전 정보를 쿼터니언으로 반환
         translation_scan = tf::Vector3(transform_scan.getOrigin().x(),transform_scan.getOrigin().y(),transform_scan.getOrigin().z()); // base_link 프레임을 기준
         
+        // 회전변환 결과 확인
+        std:: cout << "rotation matrix" << std::endl;
+        for(int i = 0; i < 3; i++)
+        {
+            for(int j =0; j < 3; j++)
+            {
+                 std::cout << rotation_scan[i][j] <<" ";
+            }
+            std::cout << std::endl;
+        }      
+
+        // base_link로 부터 떨어진 거리
+        std::cout << "TR: " <<  " x: " <<  translation_scan.getX() <<  " y: " <<  translation_scan.getY() <<  " z: " <<  translation_scan.getZ() << std::endl;
+
+        // 회전값 확인
+        double r, p, yaw;
+        rotation_scan.getEulerYPR(yaw,p,r);
+        std::cout << "r: " << r <<" p: " << p << " yaw: " << yaw << std::endl;
+
         //depth tf
         listener_depth.waitForTransform("base_link", "camera_depth_optical_frame", ros::Time(0), ros::Duration(3.0)); // 카메라를 기준으로 들어오는 데이터의 기준이 camera_depth_optical_frame으로 한다
-        listener_depth.lookupTransform("base_link","camera_depth_optical_frame", ros::Time(0), transform_depth); // --> ros::Time(0),
-        rotation_depth = tf::Matrix3x3(transform_depth.getRotation()); // 회전 정보를 쿼터니언으로 반환
+        listener_depth.lookupTransform("base_link","camera_depth_optical_frame", ros::Time(0), transform_depth);
+        rotation_depth = tf::Matrix3x3(transform_depth.getRotation()); // 회전 정보를 쿼터니언으로 반환 getrotation 회전정보를 추출하여 3x3행려로 변환
         // tf 라이브러리에서 제공하는 벡터 연산용 클래스이고 좌표변환, 벡터연산, 회전 및 변환 계산에 사용
+
         translation_depth = tf::Vector3(transform_depth.getOrigin().x(),transform_depth.getOrigin().y(),transform_depth.getOrigin().z()); // base_link 프레임을 기준
         
         succes_nonsucces = true; // tf이 적용되면 참으로 변환
@@ -63,7 +84,7 @@ void scan_depth::scan_callback(const sensor_msgs::LaserScan::ConstPtr& scan_msg)
     scan.points.resize(ranges_size); // 배열의 크기를 조정
     
     tf::Vector3 laser_scan, scan_result; // 동적 배열 기능 laser_scan은 센서에서 측정한 값을 사용한 변수, scan_result는 베이스 링크를 기준으로 라이다 스캔 값이 변환된 결과값
-    geometry_msgs::Point32 point_out_; // 계산된 좌표 데이터를 송수신하는데 사용
+    geometry_msgs::Point32 point_out_; // 계산된 좌표 데이터를 저장하는 변수
     float x, y, z; 
     float r, theta;
 
@@ -81,16 +102,17 @@ void scan_depth::scan_callback(const sensor_msgs::LaserScan::ConstPtr& scan_msg)
        x = r * cos(theta); 
        y = r * sin(theta);
        z = 0.0;
-       
+
+       std::cout << "scan data x : " << x << " y : " << y << " z : " << z << std::endl;
+
        laser_scan.setValue(x, y, z);  // 한 줄로 값을 할당
        scan_result = rotation_scan * laser_scan + translation_scan; // 회전 행렬 * laser_scan값 + base_link로 부터 직선
-       point_out_.x = scan_result.x();
+       point_out_.x = scan_result.x(); // 계산한 결과를 point_out에 대입
        point_out_.y = scan_result.y();
        point_out_.z = scan_result.z();
-
+       std::cout << "scan_result x : " << point_out_.x  << " y : " << point_out_.y << " z : " << point_out_.z << std::endl;
        scan.points.push_back(point_out_); // points에 x,y,z 좌표를 한개 씩 밀어 넣는다
     }
-        
     scan_pub.publish(scan);
 }
 
