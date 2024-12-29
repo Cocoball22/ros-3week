@@ -7,10 +7,9 @@
 #include <sensor_msgs/PointCloud2.h>
 #include <sensor_msgs/LaserScan.h>
 #include <sensor_msgs/point_cloud2_iterator.h>
-#include "opencv2/opencv.hpp"
+#include <iostream>
 #include <geometry_msgs/Point32.h>
 #include <tf/tf.h>
-#include <cmath>
 
 class scan_depth
 {
