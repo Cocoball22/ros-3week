@@ -1,5 +1,5 @@
-#ifndef SCAN_DEPTH_CPP
-#define SCAN_DEPTH_CPP
+#ifndef SCANDEPTH_CPP
+#define SCANDEPTH_CPP
 
 #include <ros/ros.h>
 #include <tf/transform_listener.h>
@@ -11,7 +11,7 @@
 #include <geometry_msgs/Point32.h>
 #include <tf/tf.h>
 
-class scan_depth
+class ScanDepth
 {
 private:
     ros::NodeHandle nh;
@@ -28,10 +28,8 @@ private:
   void listener_func();
 
 public:
-    scan_depth(/* args */);
-    ~scan_depth();
+    ScanDepth(/* args */);
+    ~ScanDepth();
 };
-
-
 
 #endif
