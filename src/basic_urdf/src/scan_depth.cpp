@@ -138,7 +138,7 @@ void scan_depth::depth_callback(const sensor_msgs::PointCloud2::ConstPtr& depth_
     tf::Vector3 depth_result; // 행렬 연산의 결과 변수
     
     // 현재 점의 x 좌표 값을 반환하고 ++iter_x: 다음 점의 x 좌표로 이동
-    for (size_t i = 0; i < depth_msg->width * depth_msg->height; ++i, ++iter_x, ++iter_y, ++iter_z)
+    for (int i = 0; i < depth_msg->width * depth_msg->height; ++i, ++iter_x, ++iter_y, ++iter_z)
     {
         // ROS_INFO("1-Point[%ld]: x = %f, y = %f, z = %f", i, *iter_x, *iter_y, *iter_z);
         tf::Vector3 laser_depth(*iter_x,*iter_y,*iter_z); // 카메라에서 읽힌 좌표 점의 값
