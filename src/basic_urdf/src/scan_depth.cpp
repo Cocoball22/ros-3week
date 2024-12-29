@@ -1,6 +1,6 @@
-#include "basic_urdf/scan_depth.hpp"
+#include "basic_urdf/ScanDepth.hpp"
 
-scan_depth::scan_depth()
+ScanDepth::ScanDepth()
 {
     while(!succes_nonsucces && ros::ok())
     {
@@ -9,22 +9,22 @@ scan_depth::scan_depth()
     // nh.subscribe ROS에서 제공하는 생성함수, 큐 크기는 버퍼에 저장될 수있는 메시지 수 큐 크기가 1로 설정하면, 최신 메시지만 유지되고 이전메시지는 삭제
     // this 콜백 함수가 클래스 멤버 함수 이기 때문에, 해당 클래스 인스턴스의 멤버 변수와 메서드에 접근
     // 노드가 scan1 토픽을 구족하고 /scan1 토픽에서 메시지가 퍼블리시 되면 subscriber가 수신 
-    // 수신된 메시지는 scan_depth 클래스의 scan_callback 멤버 함수로 전달
-    scan_sub =nh.subscribe("/scan1", 1, &scan_depth::scan_callback, this); 
+    // 수신된 메시지는 ScanDepth 클래스의 scan_callback 멤버 함수로 전달
+    scan_sub =nh.subscribe("/scan1", 1, &ScanDepth::scan_callback, this); 
     scan_pub = nh.advertise<sensor_msgs::PointCloud>("/revised_scan1",1);
 
-    depth_sub = nh.subscribe("/camera/depth/points",1, &scan_depth::depth_callback, this);
+    depth_sub = nh.subscribe("/camera/depth/points",1, &ScanDepth::depth_callback, this);
     depth_tf_pub = nh.advertise<sensor_msgs::PointCloud>("/depth_tf",1);
     depth_non_pub = nh.advertise<sensor_msgs::PointCloud>("/depth_non_tf",1); 
 }
 
-scan_depth::~scan_depth()
+ScanDepth::~ScanDepth()
 {
-    ROS_INFO("scan_depth test down.");
+    ROS_INFO("ScanDepth test down.");
 
 }
 
-void scan_depth::listener_func()
+void ScanDepth::listener_func()
 {
       try
       {
@@ -72,7 +72,7 @@ void scan_depth::listener_func()
         }
 }
 
-void scan_depth::scan_callback(const sensor_msgs::LaserScan::ConstPtr& scan_msg)
+void ScanDepth::scan_callback(const sensor_msgs::LaserScan::ConstPtr& scan_msg)
 {
     int ranges_size = scan_msg->ranges.size(); // pointcloud2의 데이터 크기
     
@@ -116,7 +116,7 @@ void scan_depth::scan_callback(const sensor_msgs::LaserScan::ConstPtr& scan_msg)
     scan_pub.publish(scan);
 }
 
-void scan_depth::depth_callback(const sensor_msgs::PointCloud2::ConstPtr& depth_msg)
+void ScanDepth::depth_callback(const sensor_msgs::PointCloud2::ConstPtr& depth_msg)
 {   
     // 3D 점들의 집합을 표현하는 변수
     sensor_msgs::PointCloud depth_tf, depth_non_tf; // 카메라의 depth 이미지를 3D 공간상에서 점으로 표현할껀데 그 중 tf를 적용한 것과 안한것을 나타냄
