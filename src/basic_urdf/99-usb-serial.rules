@@ -1,0 +1,3 @@
+SUBSYSTEM=="tty", ATTRS{idVendor}=="10c4", ATTRS{idProduct}=="ea60", ATTRS{serial}=="0001", MODE:="0777", SYMLINK+="front_laser",  ATTRS{    devpath}=="5.3"
+SUBSYSTEM=="tty", ATTRS{idVendor}=="10c4", ATTRS{idProduct}=="ea60", ATTRS{serial}=="0001", MODE:="0777", SYMLINK+="rear_laser",  ATTRS{d    evpath}=="5.1"
+SUBSYSTEM=="video4linux", ATTRS{idVendor}=="2bc5", ATTRS{idProduct}=="0511", MODE:="0777", SYMLINK+="servinggo", ATTRS{devpath}=="6.1"
